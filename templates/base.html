@@ -77,7 +77,9 @@
             {% endif %}
           </div>
         </li>
-
+        <li class="nav-item">
+          <a class="nav-link" href="#">Custom</a>
+        </li>
       </ul>
       <div class="col-12 col-lg-4 my-auto py-1 py-lg-0" id="search-bar">
         <form method="GET" action="">
@@ -112,18 +114,18 @@
   </header>
   {% block content %}
   {% endblock %}
-<footer>
-  <div class="card">
-    <div class="card-body">
-      <h5 class="card-title">See nothing you like?</h5>
-      <p class="card-text">Did you know that we also make custom-designed guitars? Book an appointment for a consultation completely free of charge!</p>
-      <a href="#" class="btn btn-primary">Book here!</a>
-    </div>
+  
+
+<footer class="fixed-bottom">
+  <div class="footer-text">
+    Don't see anything you like?<br><a href="#">We help you create your custom guitar!</a>
   </div>
 </footer>
   {% block postloadjs %}
   <script type="text/javascript">
     $('.toast').toast('show');
+  </script>
+  
   </script>
   {% endblock %}
 </body>

@@ -2,10 +2,14 @@ html {
     height: 100%;
 }
 
-/* #top-header {
-    height: 10%;
-    background-color: pink;
-} */
+body {
+    background: url('/media/rockstar-hero-image.jpg')no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+    height: calc(100vh - 164px);
+    font-family: 'Montserrat';
+
+}
 
 header#top-header{
     height: 10%;
@@ -14,12 +18,22 @@ header#top-header{
     }
     
 header#top-header:hover{
-background-color: rgb(255,0,0);
-color: beige;
+background-color: white;
+color: black;
 transition: 1s ease;
 }
 
 
 #search-bar {
     width: 20%;
+}
+
+footer {
+    height: 6%;
+    background-color: #5A3825;
+    opacity: 0.7;
+}
+
+.footer-text {
+    font-size: xx-small;
 }
