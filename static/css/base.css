@@ -1,4 +1,25 @@
-.test {
-    color: rgb(213, 8, 42);
-    font-size: larger;
+html {
+    height: 100%;
+}
+
+/* #top-header {
+    height: 10%;
+    background-color: pink;
+} */
+
+header#top-header{
+    height: 10%;
+    background-color: rgb(255,0,0,0.0);
+    transition: 1s ease;
+    }
+    
+header#top-header:hover{
+background-color: rgb(255,0,0);
+color: beige;
+transition: 1s ease;
+}
+
+
+#search-bar {
+    width: 20%;
 }
