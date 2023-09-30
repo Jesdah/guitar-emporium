@@ -84,8 +84,7 @@
       <div class="col-12 col-lg-4 my-auto py-1 py-lg-0" id="search-bar">
         <form method="GET" action="">
           <div class="input-group w-100">
-            <input class="form-control border rounded-0" type="text" name="q"
-              placeholder="Search our site">
+            <input class="form-control border rounded-0" type="text" name="q" placeholder="Search our site">
             <div class="input-group-append">
               <button class="form-control btn border rounded-0" type="submit">
                 <span class="icon">
@@ -114,18 +113,73 @@
   </header>
   {% block content %}
   {% endblock %}
-  
 
-<footer class="fixed-bottom">
-  <div class="footer-text">
-    Don't see anything you like?<br><a href="#">We help you create your custom guitar!</a>
+  <div class="modal " id="myModal" tabindex="-1">
+    <div class="modal-dialog ">
+      <div class="modal-content side-content">
+        <div class="modal-header">
+          <h5 class="modal-title">See nothing you like?</h5>
+        </div>
+        <div class="modal-body">
+          <p>Did you know we also make custom designed guitars? Get in touch with us and we'll sort it out! Everything is under the Custom tab.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary close accept-btn" data-bs-dismiss="modal">Got it!</button>
+        </div>
+      </div>
+    </div>
   </div>
-</footer>
+  <footer class="fixed-bottom">
+    <div class="footer-text">
+      Don't see anything you like?<br><a href="#">We help you create your custom
+        guitar!</a>
+    </div>
+    <div>
+      
+    </div>
+  </footer>
   {% block postloadjs %}
   <script type="text/javascript">
     $('.toast').toast('show');
   </script>
-  
+  <!-- When user is inactive a modal will be displayed reminding the user about the cusom service.
+    this code was taken from:
+    https://stackoverflow.com/questions/53108336/show-popup-when-user-is-inactive-after-5-minutes -->
+  <script type="text/javascript">
+
+    var idleTime = 0
+
+    let span = document.getElementsByClassName("close")[0];
+    let modal = document.getElementById("myModal");
+
+    document.addEventListener('mousemove', resetIdleTime, false);
+    document.addEventListener('keypress', resetIdleTime, false);
+
+    function resetIdleTime() {
+      idleTime = 0
+    }
+
+
+    function checkIfIdle() {
+      idleTime += 1000
+      console.log(idleTime)
+      if (idleTime >= 5000) {
+        modal.style.display = "block";
+        clearInterval(idleInterval)
+      }
+    }
+
+    var idleInterval = setInterval(checkIfIdle, 1000);
+
+    span.onclick = function() { // When the user clicks on (x), close the modal
+  modal.style.display = "none";
+};
+
+window.onclick = function(event) {  // When the user clicks anywhere outside of the modal, close it
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+};
   </script>
   {% endblock %}
 </body>

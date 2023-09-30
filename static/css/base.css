@@ -30,10 +30,21 @@ transition: 1s ease;
 
 footer {
     height: 6%;
-    background-color: #5A3825;
-    opacity: 0.7;
+    background-color: #5a38258f;
 }
 
 .footer-text {
     font-size: xx-small;
+}
+
+.side-content {
+    background-color: #5a382571;
+}
+
+.accept-btn {
+    background-color: #3D2314;
+}
+
+.accept-btn:hover {
+    background-color: #3d231478;
 }
