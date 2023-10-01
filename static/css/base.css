@@ -38,7 +38,7 @@ footer {
 }
 
 .side-content {
-    background-color: #5a382571;
+    background-color: #5a3825de;
 }
 
 .accept-btn {
@@ -77,4 +77,21 @@ footer {
 
 .padding-bottom {
     padding-bottom: 50px;
+}
+
+.detail-bg {
+    background-color: #3d2314d2;
+}
+
+/* this hovereffect I got from:
+https://thebrandsmen.com/css-image-hover-effects/ */
+.grow {
+    transition: 1s ease;
+    }
+    
+.grow:hover{
+-webkit-transform: scale(1.2);
+-ms-transform: scale(1.2);
+transform: scale(1.2);
+transition: 1s ease;
 }

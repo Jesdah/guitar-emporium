@@ -58,3 +58,81 @@ def all_guitars(request):
     }
 
     return render(request, 'guitars/guitars.html', context)
+
+def guitar_detail(request, guitar_id):
+    """ A view to show individual product details """
+
+    guitar = get_object_or_404(Guitar, pk=guitar_id)
+
+    context = {
+        'guitar': guitar,
+    }
+
+    return render(request, 'guitars/guitar_detail.html', context)
+
+@login_required
+def add_guitar(request):
+    """ Add a product to the store """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store owners can do that.')
+        return redirect(reverse('home'))
+
+    if request.method == 'POST':
+        form = GuitarForm(request.POST, request.FILES)
+        if form.is_valid():
+            guitar = form.save()
+            messages.success(request, 'Successfully added product!')
+            return redirect(reverse('guitar_detail', args=[guitar.id]))
+        else:
+            messages.error(request, 'Failed to add product. Please ensure the form is valid.')
+    else:
+        form = GuitarForm()
+        
+    template = 'guitars/add_guitar.html'
+    context = {
+        'form': form,
+    }
+
+    return render(request, template, context)
+
+
+@login_required
+def edit_guitar(request, guitar_id):
+    """ Edit a product in the store """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store owners can do that.')
+        return redirect(reverse('home'))
+
+    guitar = get_object_or_404(Guitar, pk=guitar_id)
+    if request.method == 'POST':
+        form = GuitarForm(request.POST, request.FILES, instance=guitar)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Successfully updated product!')
+            return redirect(reverse('product_detail', args=[guitar.id]))
+        else:
+            messages.error(request, 'Failed to update product. Please ensure the form is valid.')
+    else:
+        form = GuitarForm(instance=guitar)
+        messages.info(request, f'You are editing {guitar.name}')
+
+    template = 'guitars/edit_guitar.html'
+    context = {
+        'form': form,
+        'guitar': guitar,
+    }
+
+    return render(request, template, context)
+
+
+@login_required
+def delete_guitar(request, guitar_id):
+    """ Delete a product from the store """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store owners can do that.')
+        return redirect(reverse('home'))
+
+    guitar = get_object_or_404(Guitar, pk=guitar_id)
+    guitar.delete()
+    messages.success(request, 'Product deleted!')
+    return redirect(reverse('guitars'))
