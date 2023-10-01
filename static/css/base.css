@@ -29,7 +29,7 @@ transition: 1s ease;
 }
 
 footer {
-    height: 7%;
+    height: 45px;
     background-color: #5a38258f;
 }
 
@@ -69,4 +69,12 @@ footer {
 .burger-mobile {
     font-size: larger;
     margin-left: 10px;
+}
+
+.padding-top {
+    padding-top: 50px;
+}
+
+.padding-bottom {
+    padding-bottom: 50px;
 }
