@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'guitars',
     'crispy_forms',
     "crispy_bootstrap4",
+    'cart',
 ]
 
 CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap4"
