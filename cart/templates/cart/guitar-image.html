@@ -1,0 +1,7 @@
+<div class="col-12 col-sm-6 mb-2">
+    {% if item.guitar.image %}
+    <img class="img-fluid rounded" src="{{ item.guitar.image.url }}" alt="{{ item.guitar.name }}">
+    {% else %}
+    <img class="img-fluid rounded" src="{{ MEDIA_URL }}noimage.png" alt="{{ item.guitar.name }}">
+    {% endif %}
+</div>
