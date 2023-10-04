@@ -87,7 +87,7 @@ def add_guitar(request):
             messages.error(request, 'Failed to add product. Please ensure the form is valid.')
     else:
         form = GuitarForm()
-        
+ 
     template = 'guitars/add_guitar.html'
     context = {
         'form': form,
@@ -109,7 +109,7 @@ def edit_guitar(request, guitar_id):
         if form.is_valid():
             form.save()
             messages.success(request, 'Successfully updated product!')
-            return redirect(reverse('product_detail', args=[guitar.id]))
+            return redirect(reverse('guitar_detail', args=[guitar.id]))
         else:
             messages.error(request, 'Failed to update product. Please ensure the form is valid.')
     else:
