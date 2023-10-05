@@ -11,8 +11,8 @@
 {% endblock %}
 
 {% block content %}
-    <div class="overlay padding-bottom"></div>
-    <div class="container padding-bottom">
+    <div class="overlay"></div>
+    <div class="container padding-top padding-bottom">
         <div class="row">
             <div class="col-12 col-md-6">
                 <hr>
@@ -35,7 +35,7 @@
                     {% endfor %}
                     <div class="text-right">
                         <a class="btn text-white" href="{% url 'guitars' %}">Cancel</a>
-                        <button class="btn text-white" type="submit">Add Product</button>
+                        <button class="btn text-white accept-btn" type="submit">Add Product</button>
                     </div>
                 </form>
             </div>            

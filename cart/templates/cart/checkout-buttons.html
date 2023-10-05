@@ -1,12 +1,30 @@
 <a href="{% url 'guitars' %}" class="btn btn-outline-black rounded-0 btn-lg">
-    <span class="icon">
-        <i class="fas fa-chevron-left"></i>
-    </span>
-    <span class="text-uppercase">Keep Shopping</span>
+    <div class="d-none d-md-block">
+        <span class="icon">
+            <i class="fas fa-chevron-left"></i>
+        </span>
+        <span class="text-uppercase">Keep Shopping</span>
+    </div>
+    <!--mobile view-->
+    <div class="d-sm-block d-md-none">
+        <span class="icon text-white">
+            <i class="fas fa-chevron-left"></i>
+        </span>
+        <span class="text-uppercase text-white">Keep Shopping</span>
+    </div>
 </a>
-<a href="#" class="btn btn-black rounded-0 btn-lg">
-    <span class="text-uppercase">Secure Checkout</span>
-    <span class="icon">
-        <i class="fas fa-lock"></i>
-    </span>
+<a href="#" class="btn rounded-3 btn-lg accept-btn">
+    <div class="d-none d-md-block">
+        <span class="text-uppercase">Secure Checkout</span>
+        <span class="icon">
+            <i class="fas fa-lock"></i>
+        </span>
+    </div>
+    <!--mobile view-->
+    <div class="d-sm-block d-md-none">
+        <span class="text-uppercase text-white">Secure Checkout</span>
+        <span class="icon text-white">
+            <i class="fas fa-lock"></i>
+        </span>
+    </div>
 </a>

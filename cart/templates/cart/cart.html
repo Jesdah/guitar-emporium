@@ -11,8 +11,8 @@
 {% endblock %}
 
 {% block content %}
-<div class="overlay padding-bottom"></div>
-<div class="container mb-2 padding-bottom">
+<div class="overlay d-sm-block d-md-none"></div>
+<div class="container mb-2 padding-bottom padding-top">
     <div class="row">
         <div class="col">
             <hr>
@@ -31,7 +31,7 @@
                 <div class="row">
                     <div class="col">
                         {% include "cart/checkout-buttons.html" %}
-                        <p class="text-muted mb-5">A summary of your bag contents is below</p>
+                        <p class="mb-5">A summary of your bag contents is below</p>
                     </div>
                 </div>
                 {% for item in cart_items %}
@@ -54,9 +54,9 @@
                     </div>
                 </div>
                 {% endfor %}
-                <div class="btt-button shadow-sm rounded-0 border border-black">
-                    <a class="btt-link d-flex h-100">
-                        <i class="fas fa-arrow-up text-black mx-auto my-auto"></i>
+                <div class="shadow-sm rounded-0 border">
+                    <a class="btt-link d-flex h-100 btn">
+                        <i class="fas fa-arrow-up text-white mx-auto"></i>
                     </a>
                 </div>
             </div>
@@ -104,7 +104,7 @@
                 </table>
             </div>
             {% else %}
-            <p class="lead mb-5">Your bag is empty.</p>
+            <p class="lead mb-5">Your cart is empty.</p>
             <a href="{% url 'guitars' %}" class="btn btn-outline-black rounded-0 btn-lg">
                 <span class="icon">
                     <i class="fas fa-chevron-left"></i>
@@ -137,9 +137,9 @@
     $('.remove-item').click(function (e) {
         var csrfToken = "{{ csrf_token }}";
         var itemId = $(this).attr('id').split('remove_')[1];
-        var size = $(this).data('product_size');
+        var remove = $(this).data('product');
         var url = `/cart/remove/${itemId}/`;
-        var data = { 'csrfmiddlewaretoken': csrfToken, 'product_size': size };
+        var data = { 'csrfmiddlewaretoken': csrfToken, 'product': remove };
 
         $.post(url, data)
             .done(function () {
