@@ -181,6 +181,9 @@
   <script type="text/javascript">
     $('.toast').toast('show');
 
+
+    // This code was taken from:
+    // https://stackoverflow.com/questions/61153261/make-success-message-disappear-after-few-seconds-of-django-form-submission-and-d
     setTimeout(fade_out, 3000);
     function fade_out() {
         $(".toast").fadeOut().empty();
