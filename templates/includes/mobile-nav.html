@@ -9,7 +9,7 @@
             <a class="nav-link" href="{% url 'guitars' %}">Guitars</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="#">Custom</a>
+            <a class="nav-link" href="{% url 'custom' %}">Custom</a>
         </li>
         {% if request.user.is_authenticated %}
         {% if request.user.is_superuser %}
