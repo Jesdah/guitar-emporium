@@ -20,17 +20,6 @@ def cart_contents(request):
                 'quantity': item_data,
                 'guitar': guitar,
             })
-        # else:
-        #     guitar = get_object_or_404(Guitar, pk=item_id)
-        #     for size, quantity in item_data['items_by_size'].items():
-        #         total += quantity * guitar.price
-        #         guitar_count += quantity
-        #         cart_items.append({
-        #             'item_id': item_id,
-        #             'quantity': quantity,
-        #             'guitar': guitar,
-        #             'size': size,
-        #         })
 
     if total < settings.FREE_DELIVERY_THRESHOLD:
         delivery = total * Decimal(settings.STANDARD_DELIVERY_PERCENTAGE / 100)
