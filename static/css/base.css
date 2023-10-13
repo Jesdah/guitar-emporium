@@ -41,15 +41,27 @@ footer {
     background-color: #5a3825de;
 }
 
+/* This code was taken from:
+https://www.sliderrevolution.com/resources/css-button-hover-effects/ */
 .accept-btn {
     margin: 5px;
-    border-color: white;
-    background-color: #3D2314;
-    color: white;
+    transition: all .5s ease;
+    color: #fff;
+    border: 3px solid white;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1;
+    font-size: 17px;
+    background-color : transparent;
+    padding: 10px;
+    outline: none;
+    border-radius: 4px;
 }
 
+
 .accept-btn:hover {
-    background-color: #3d231478;
+    color: #001F3F;
+    background-color: #fff;
 }
 
 .fa-square-facebook {

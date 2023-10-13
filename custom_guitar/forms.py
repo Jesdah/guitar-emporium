@@ -14,3 +14,4 @@ class CustomGuitarForm(forms.ModelForm):
         fields = ('title', 'full_name', 'email', 'phone_number', 'message', 'make_contact',)
 
         widgets = {'make_contact': DateInput(),}
+ 
