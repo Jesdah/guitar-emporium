@@ -58,10 +58,30 @@ https://www.sliderrevolution.com/resources/css-button-hover-effects/ */
     border-radius: 4px;
 }
 
+.secure-checkout-btn {
+    margin: 5px;
+    transition: all .5s ease;
+    color: #3D2314;
+    border: 3px solid #3D2314;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1;
+    font-size: 17px;
+    background-color : transparent;
+    padding: 10px;
+    outline: none;
+    border-radius: 4px;
+}
+
 
 .accept-btn:hover {
     color: #001F3F;
     background-color: #fff;
+}
+
+.secure-checkout-btn:hover {
+    color: #fff;
+    background-color: #3D2314;
 }
 
 .fa-square-facebook {
