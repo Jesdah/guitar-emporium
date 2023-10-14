@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     'checkout',
     'profiles',
     'custom_guitar',
+    'reviews',
     'django_countries',
 ]
 
