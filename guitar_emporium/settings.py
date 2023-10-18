@@ -33,7 +33,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 DEBUG = True
 
 ALLOWED_HOSTS = ['8000-jesdah-guitaremporium-c4g6oji3aws.ws-eu105.gitpod.io',
-'https://guitar-emporium-8025a898f08c.herokuapp.com/']
+'guitar-emporium-8025a898f08c.herokuapp.com']
 
 
 # Application definition
