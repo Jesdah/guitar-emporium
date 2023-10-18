@@ -32,8 +32,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['8000-jesdah-guitaremporium-c4g6oji3aws.ws-eu105.gitpod.io',
-'guitar-emporium-8025a898f08c.herokuapp.com']
+ALLOWED_HOSTS = ['8000-jesdah-guitaremporium-c4g6oji3aws.ws-eu105.gitpod.io', 'guitar-emporium-8025a898f08c.herokuapp.com']
 
 
 # Application definition
@@ -178,6 +177,12 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 if 'USE_AWS' in os.environ:
+
+     # Cache control
+    AWS_S3_OBJECT_PARAMETERS = {
+        'Expires': 'Thu, 31 Dec 2099 20:00:00 GMT',
+        'CacheControl': 'max-age=94608000',
+    }
     # Bucket Config
     AWS_STORAGE_BUCKET_NAME = 'guitar-emporium-8025a898f08c'
     AWS_S3_REGION_NAME = 'eu-north-1'
