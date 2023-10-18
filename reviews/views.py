@@ -41,4 +41,4 @@ def view_review(request, guitar_id):
         'reviews': reviews
     }
 
-    return render(request, 'guitars/guitar_detail.html', context)
+    return render(request, 'guitars/templates/guitars/guitar_detail.html', context)
