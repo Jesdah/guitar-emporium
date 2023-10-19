@@ -2,106 +2,107 @@
 {% load static %}
 
 {% block page_header %}
-    <div class="container header-container">
-        <div class="row">
-            <div class="col"></div>
-        </div>
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
     </div>
+</div>
 {% endblock %}
 
 {% block content %}
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
-                <div class="image-container my-5">
-                    {% if guitar.image %}
-                        <a href="{{ guitar.image.url }}" target="_blank">
-                            <img class="card-img-top img-fluid grow" src="{{ guitar.image.url }}" alt="{{ guitar.name }}">
-                        </a>
-                        {% else %}
-                        <a href="">
-                            <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ guitar.name }}">
-                        </a>
-                    {% endif %}
-                </div>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
+            <div class="image-container my-5">
+                {% if guitar.image %}
+                <a href="{{ guitar.image.url }}" target="_blank">
+                    <img class="card-img-top img-fluid grow" src="{{ guitar.image.url }}" alt="{{ guitar.name }}">
+                </a>
+                {% else %}
+                <a href="">
+                    <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ guitar.name }}">
+                </a>
+                {% endif %}
             </div>
-            <div class="col-12 col-md-6 col-lg-4 detail-bg">
-                <div class="product-details-container mb-5 mt-md-5">
-                    <p class="mb-0">{{ guitar.name }}</p>
-                    <p class="lead mb-0 text-left font-weight-bold">${{ guitar.price }}</p>
-                    {% if guitar.category %}
-                    <p class="small mt-1 mb-0">
-                        <a class="text-white" href="{% url 'guitars' %}?category={{ guitar.category.name }}">
-                            <i class="fas fa-tag mr-1"></i>{{ guitar.category.friendly_name }}
-                        </a>
-                    </p>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4 detail-bg">
+            <div class="product-details-container mb-5 mt-md-5">
+                <p class="mb-0">{{ guitar.name }}</p>
+                <p class="lead mb-0 text-left font-weight-bold">${{ guitar.price }}</p>
+                {% if guitar.category %}
+                <p class="small mt-1 mb-0">
+                    <a class="text-white" href="{% url 'guitars' %}?category={{ guitar.category.name }}">
+                        <i class="fas fa-tag mr-1"></i>{{ guitar.category.friendly_name }}
+                    </a>
+                </p>
+                {% endif %}
+
+                {% if guitar.rating %}
+                <small class=""><i class="fas fa-star mr-1"></i>{{ guitar.rating }} / 10</small>
+                {% else %}
+                <small class="">No Rating</small>
+                {% endif %}
+                {% if request.user.is_superuser %}
+                <small class="ml-3">
+                    <a href="{% url 'edit_guitar' guitar.id %}">Edit</a> |
+                    <a class="text-danger" href="{% url 'delete_guitar' guitar.id %}">Delete</a>
+                    {% if request.user.is_authenticated %}
+                    <a class="text-white" href="{% url 'add_review' guitar.id %}">Leave a Review</a>
                     {% endif %}
-                    {% if guitar.rating %}
-                        <small class=""><i class="fas fa-star mr-1"></i>{{ guitar.rating }} / 10</small>
-                    {% else %}
-                        <small class="">No Rating</small>
-                    {% endif %}
-                    {% if request.user.is_superuser %}
-                        <small class="ml-3">
-                            <a href="{% url 'edit_guitar' guitar.id %}">Edit</a> | 
-                            <a class="text-danger" href="{% url 'delete_guitar' guitar.id %}">Delete</a>
-                            {% if request.user.is_authenticated %}
-                            <a class="text-white" href="{% url 'review' guitar.id %}">Leave a Review</a>
-                            {% endif %}
-                        </small>
-                    {% endif %}
-                    <p class="mt-3">{{ guitar.description }}</p>
-                    <form class="form" action="{% url 'add_to_cart' guitar.id %}" method="POST">
-                        {% csrf_token %}
-                        <div class="form-row">
-                            <div class="col-12">
-                                <p class="mt-3"><strong>Quantity:</strong></p>
-                                <div class="form-group w-50">
-                                    <div class="input-group">
-                                        <div class="input-group-prepend">
-                                            <button class="decrement-qty btn btn-black rounded-0" 
-                                                data-item_id="{{ guitar.id }}" id="decrement-qty_{{ guitar.id }}">
-                                                <span class="icon text-white">
-                                                    <i class="fas fa-minus"></i>
-                                                </span>
-                                            </button>
-                                        </div>
-                                        <input class="form-control qty_input" type="number"
-                                            name="quantity" value="1" min="1" max="99"
-                                            data-item_id="{{ guitar.id }}"
-                                            id="id_qty_{{ guitar.id }}">
-                                        <div class="input-group-append">
-                                            <button class="increment-qty btn btn-black rounded-0"
-                                                data-item_id="{{ guitar.id }}" id="increment-qty_{{ guitar.id }}">
-                                                <span class="icon text-white">
-                                                    <i class="fas fa-plus"></i>
-                                                </span>
-                                            </button>
-                                        </div>
+                </small>
+                {% endif %}
+                <p class="mt-3">{{ guitar.description }}</p>
+                <form class="form" action="{% url 'add_to_cart' guitar.id %}" method="POST">
+                    {% csrf_token %}
+                    <div class="form-row">
+                        <div class="col-12">
+                            <p class="mt-3"><strong>Quantity:</strong></p>
+                            <div class="form-group w-50">
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <button class="decrement-qty btn btn-black rounded-0"
+                                            data-item_id="{{ guitar.id }}" id="decrement-qty_{{ guitar.id }}">
+                                            <span class="icon text-white">
+                                                <i class="fas fa-minus"></i>
+                                            </span>
+                                        </button>
+                                    </div>
+                                    <input class="form-control qty_input" type="number" name="quantity" value="1"
+                                        min="1" max="99" data-item_id="{{ guitar.id }}" id="id_qty_{{ guitar.id }}">
+                                    <div class="input-group-append">
+                                        <button class="increment-qty btn btn-black rounded-0"
+                                            data-item_id="{{ guitar.id }}" id="increment-qty_{{ guitar.id }}">
+                                            <span class="icon text-white">
+                                                <i class="fas fa-plus"></i>
+                                            </span>
+                                        </button>
                                     </div>
                                 </div>
                             </div>
-
-                            <div class="col">
-                                <a href="{% url 'guitars' %}" class="btn mt-5">
-                                    <span class="icon text-white">
-                                        <i class="fas fa-chevron-left"></i>
-                                    </span>
-                                    <span class="text-uppercase text-white">Keep Shopping</span>
-                                </a>
-                                <input type="submit" class="accept-btn btn text-uppercase mt-5" value="Add to Cart">
-                            </div>
-                            <input type="hidden" name="redirect_url" value="{{ request.path }}">
                         </div>
-                    </form>
-                </div>
+                        <div class="col">
+                            <a href="{% url 'guitars' %}" class="btn mt-5">
+                                <span class="icon text-white">
+                                    <i class="fas fa-chevron-left"></i>
+                                </span>
+                                <span class="text-uppercase text-white">Keep Shopping</span>
+                            </a>
+                            <input type="submit" class="accept-btn btn text-uppercase mt-5" value="Add to Cart">
+                            <!-- Button trigger modal -->
+                            <button type="button" class="btn accept-btn mt-5" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal">
+                                Reviews
+                            </button>
+                        </div>
+                        <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                    </div>
+                </form>
             </div>
         </div>
     </div>
-    
-    {% for review in reviews %}
-    {{ review }}
-    {% endfor %}
+</div>
+
 {% endblock %}
 
 {% block postloadjs %}

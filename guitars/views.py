@@ -4,6 +4,7 @@ from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from django.db.models.functions import Lower
 
+from reviews.models import Reviews
 from .models import Guitar, Category
 from .forms import GuitarForm
 
@@ -60,12 +61,15 @@ def all_guitars(request):
     return render(request, 'guitars/guitars.html', context)
 
 def guitar_detail(request, guitar_id):
-    """ A view to show individual product details """
+    """ A view to show individual Guitar details and display reviews
+    and filter the by guitar_id.
+     """
 
     guitar = get_object_or_404(Guitar, pk=guitar_id)
-
+    reviews = Reviews.objects.filter(guitar=guitar_id)
     context = {
         'guitar': guitar,
+        'guitar_reviews': reviews
     }
 
     return render(request, 'guitars/guitar_detail.html', context)
