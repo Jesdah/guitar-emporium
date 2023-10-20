@@ -59,6 +59,7 @@ INSTALLED_APPS = [
     'reviews',
     'django_countries',
     'storages',
+    'wish_list',
 ]
 
 CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap4"
