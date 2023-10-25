@@ -56,12 +56,15 @@
         <a href="{% url 'home' %}" class="nav-link main-logo-link">
           <h2 class="logo-font my-0 change">Guitar Emporium</h2>
         </a>
+
         <div class="d-lg-none">
           <!-- dropdown -->
           {% include 'includes/mobile-nav.html' %}
           <!-- end of dropdown -->
         </div>
+
       </div>
+
       <div>
         <ul class="nav d-none d-lg-flex">
           <li class="nav-item">
@@ -108,22 +111,66 @@
           </div>
         </form>
       </div>
-      <div class="d-none d-md-flex d-lg-flex">
-        <li class="list-inline-item">
-          <a class="{% if grand_total %}text-info font-weight-bold{% else %}{% endif %} nav-link"
-            href="{% url 'view_cart'%}">
-            <div class="text-center">
-              <div><i class="fa-solid fa-cart-shopping"></i></div>
-              <p class="my-0">
-                {% if grand_total %}
-                ${{ grand_total|floatformat:2 }}
-                {% else %}
-                $0.00
-                {% endif %}
-              </p>
+      <div class="d-flex align-items-center justify-content-between">
+        <details class="d-lg-none">
+          <summary class="mobile-summary pe-1"><i class="fa-regular fa-envelope fa-2xl"></i></summary>
+          <div id="mc_embed_shell" class="details-mobile">
+            <link href="//cdn-images.mailchimp.com/embedcode/classic-061523.css" rel="stylesheet" type="text/css">
+            <div id="mc_embed_signup">
+              <form
+                action="https://gitpod.us21.list-manage.com/subscribe/post?u=9919a2e14f757139e6c21c3db&amp;id=80af54f3b8&amp;f_id=009ee1e6f0"
+                method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate"
+                target="_blank">
+                <div id="mc_embed_signup_scroll">
+                  <h2>Subscribe</h2>
+                  <div class="indicates-required"><span class="asterisk">*</span> indicates required</div>
+                  <div class="mc-field-group"><label for="mce-EMAIL">Email Address <span
+                        class="asterisk">*</span></label><input type="email" name="EMAIL" class="required email"
+                      id="mce-EMAIL" required="" value=""></div>
+                  <div id="mce-responses" class="clear foot">
+                    <div class="response" id="mce-error-response" style="display: none;"></div>
+                    <div class="response" id="mce-success-response" style="display: none;"></div>
+                  </div>
+                  <div aria-hidden="true" style="position: absolute; left: -5000px;">
+                    <!-- /* real people should not fill this in and expect good things - do not remove this or risk form bot
+                signups */ -->
+                    <input type="text" name="b_9919a2e14f757139e6c21c3db_80af54f3b8" tabindex="-1" value="">
+                  </div>
+                  <div class="optionalParent">
+                    <div class="clear foot">
+                      <input type="submit" name="subscribe" id="mc-embedded-subscribe" class="button" value="Subscribe">
+                      <p style="margin: 0px auto;"><a href="http://eepurl.com/iCyq62"
+                          title="Mailchimp - email marketing made easy and fun"><span
+                            style="display: inline-block; background-color: transparent; border-radius: 4px;"><img
+                              class="refferal_badge"
+                              src="https://digitalasset.intuit.com/render/content/dam/intuit/mc-fe/en_us/images/intuit-mc-rewards-text-dark.svg"
+                              alt="Intuit Mailchimp"
+                              style="width: 220px; height: 40px; display: flex; padding: 2px 0px; justify-content: center; align-items: center;"></span></a>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </form>
             </div>
-          </a>
-        </li>
+          </div>
+        </details>
+        <div class="d-none d-md-flex d-lg-flex">
+          <li class="list-inline-item">
+            <a class="{% if grand_total %}text-info font-weight-bold{% else %}{% endif %} nav-link"
+              href="{% url 'view_cart'%}">
+              <div class="text-center">
+                <div><i class="fa-solid fa-cart-shopping"></i></div>
+                <p class="my-0">
+                  {% if grand_total %}
+                  ${{ grand_total|floatformat:2 }}
+                  {% else %}
+                  $0.00
+                  {% endif %}
+                </p>
+              </div>
+            </a>
+          </li>
+        </div>
       </div>
   </header>
 
@@ -152,8 +199,8 @@
     <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
       <div class="modal-content side-content">
         <div class="modal-header">
-          <h1 class="modal-title fs-5" id="exampleModalLabel">Reviews for <strong class="text-capitalize">{{ guitar.name
-              }}</strong></h1>
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Reviews for <strong class="text-capitalize">
+              {{ guitar.name }}</strong></h1>
         </div>
         <div class="modal-body mx-auto">
           {% include 'reviews/view_review.html' %}
@@ -182,47 +229,49 @@
     </div>
   </div>
   <footer class="fixed-bottom">
-    <div id="mc_embed_shell" class="text-black">
-      <link href="//cdn-images.mailchimp.com/embedcode/classic-061523.css" rel="stylesheet" type="text/css">
-      <div id="mc_embed_signup">
-        <form
-          action="https://gitpod.us21.list-manage.com/subscribe/post?u=9919a2e14f757139e6c21c3db&amp;id=80af54f3b8&amp;f_id=009ee1e6f0"
-          method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate"
-          target="_blank">
-          <div id="mc_embed_signup_scroll">
-            <h2>Subscribe</h2>
-            <div class="indicates-required"><span class="asterisk">*</span> indicates required</div>
-            <div class="mc-field-group"><label for="mce-EMAIL">Email Address <span
-                  class="asterisk">*</span></label><input type="email" name="EMAIL" class="required email"
-                id="mce-EMAIL" required="" value=""></div>
-            <div id="mce-responses" class="clear foot">
-              <div class="response" id="mce-error-response" style="display: none;"></div>
-              <div class="response" id="mce-success-response" style="display: none;"></div>
-            </div>
-            <div aria-hidden="true" style="position: absolute; left: -5000px;">
-              /* real people should not fill this in and expect good things - do not remove this or risk form bot
-              signups */
-              <input type="text" name="b_9919a2e14f757139e6c21c3db_80af54f3b8" tabindex="-1" value="">
-            </div>
-            <div class="optionalParent">
-              <div class="clear foot">
-                <input type="submit" name="subscribe" id="mc-embedded-subscribe" class="button" value="Subscribe">
-                <p style="margin: 0px auto;"><a href="http://eepurl.com/iCyq62"
-                    title="Mailchimp - email marketing made easy and fun"><span
-                      style="display: inline-block; background-color: transparent; border-radius: 4px;"><img
-                        class="refferal_badge"
-                        src="https://digitalasset.intuit.com/render/content/dam/intuit/mc-fe/en_us/images/intuit-mc-rewards-text-dark.svg"
-                        alt="Intuit Mailchimp"
-                        style="width: 220px; height: 40px; display: flex; padding: 2px 0px; justify-content: center; align-items: center;"></span></a>
-                </p>
+    <div class="d-flex justify-content-around align-items-center">
+      <details class="d-none d-lg-flex">
+        <summary>Subscribe to our newsletter!</summary>
+        <div id="mc_embed_shell" class="text-black">
+          <link href="//cdn-images.mailchimp.com/embedcode/classic-061523.css" rel="stylesheet" type="text/css">
+          <div id="mc_embed_signup">
+            <form
+              action="https://gitpod.us21.list-manage.com/subscribe/post?u=9919a2e14f757139e6c21c3db&amp;id=80af54f3b8&amp;f_id=009ee1e6f0"
+              method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate"
+              target="_blank">
+              <div id="mc_embed_signup_scroll">
+                <h2>Subscribe</h2>
+                <div class="indicates-required"><span class="asterisk">*</span> indicates required</div>
+                <div class="mc-field-group"><label for="mce-EMAIL">Email Address <span
+                      class="asterisk">*</span></label><input type="email" name="EMAIL" class="required email"
+                    id="mce-EMAIL" required="" value=""></div>
+                <div id="mce-responses" class="clear foot">
+                  <div class="response" id="mce-error-response" style="display: none;"></div>
+                  <div class="response" id="mce-success-response" style="display: none;"></div>
+                </div>
+                <div aria-hidden="true" style="position: absolute; left: -5000px;">
+                  <!-- /* real people should not fill this in and expect good things - do not remove this or risk form bot
+              signups */ -->
+                  <input type="text" name="b_9919a2e14f757139e6c21c3db_80af54f3b8" tabindex="-1" value="">
+                </div>
+                <div class="optionalParent">
+                  <div class="clear foot">
+                    <input type="submit" name="subscribe" id="mc-embedded-subscribe" class="button" value="Subscribe">
+                    <p style="margin: 0px auto;"><a href="http://eepurl.com/iCyq62"
+                        title="Mailchimp - email marketing made easy and fun"><span
+                          style="display: inline-block; background-color: transparent; border-radius: 4px;"><img
+                            class="refferal_badge"
+                            src="https://digitalasset.intuit.com/render/content/dam/intuit/mc-fe/en_us/images/intuit-mc-rewards-text-dark.svg"
+                            alt="Intuit Mailchimp"
+                            style="width: 220px; height: 40px; display: flex; padding: 2px 0px; justify-content: center; align-items: center;"></span></a>
+                    </p>
+                  </div>
+                </div>
               </div>
-            </div>
+            </form>
           </div>
-        </form>
-      </div>
-    </div>
-
-    <div class="d-flex justify-content-around">
+        </div>
+      </details>
       <div class="footer-text">
         Don't see anything you like?<br><a href="{% url 'custom' %}">We help you create your custom
           guitar!</a>

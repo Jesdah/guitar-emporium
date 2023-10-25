@@ -16,11 +16,11 @@
         <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
             <div class="image-container my-5">
                 {% if guitar.image %}
-                <figure>
+                <figure class="image-figure">
                     <a href="{{ guitar.image.url }}" target="_blank">
                         <img class="card-img-top img-fluid grow" src="{{ guitar.image.url }}" alt="{{ guitar.name }}">
                         {% if request.user.is_authenticated %}
-                        <figcaption>
+                        <figcaption class="image-figcaption">
                             {% if wishlist_item %}
                             <a href="{% url 'remove_from_wishlist' guitar.id %}"><i class="fa-solid fa-heart fa-2xl"
                                     style="color: #ff0000;"></i></a>

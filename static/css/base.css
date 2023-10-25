@@ -29,7 +29,6 @@ header#top-header:hover {
 }
 
 footer {
-    height: 45px;
     background-color: #5a38258f;
 }
 
@@ -166,11 +165,11 @@ https://getcssscan.com/css-box-shadow-examples */
     height: 2px;
 }
 
-figure {
+.image-figure {
     position: relative
 }
 
-figcaption {
+.image-figcaption {
     position: absolute;
     height: 31px;
     bottom: 0;
@@ -182,8 +181,14 @@ figcaption {
 
 #mc_embed_signup {
     background: #fff;
-    false;
-    clear: left;
-    font: 14px Helvetica, Arial, sans-serif;
-    width: 600px;
+}
+
+.details-mobile {
+    position: absolute;
+    right: 0;
+    left: 0px
+}
+
+.mobile-summary {
+    list-style: none;
 }
