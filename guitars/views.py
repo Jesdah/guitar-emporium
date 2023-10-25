@@ -5,6 +5,7 @@ from django.db.models import Q
 from django.db.models.functions import Lower
 
 from reviews.models import Reviews
+from wish_list.models import WishList
 from .models import Guitar, Category
 from .forms import GuitarForm
 
@@ -67,9 +68,11 @@ def guitar_detail(request, guitar_id):
 
     guitar = get_object_or_404(Guitar, pk=guitar_id)
     reviews = Reviews.objects.filter(guitar=guitar_id)
+    wishlist_item = WishList.objects.filter(wishlist_item_id=guitar_id)
     context = {
         'guitar': guitar,
-        'guitar_reviews': reviews
+        'guitar_reviews': reviews,
+        'wishlist_item': wishlist_item 
     }
 
     return render(request, 'guitars/guitar_detail.html', context)

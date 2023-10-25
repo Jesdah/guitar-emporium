@@ -16,18 +16,28 @@
         <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
             <div class="image-container my-5">
                 {% if guitar.image %}
-                <a href="{{ guitar.image.url }}" target="_blank">
-                    <img class="card-img-top img-fluid grow" src="{{ guitar.image.url }}" alt="{{ guitar.name }}">
-                </a>
+                <figure>
+                    <a href="{{ guitar.image.url }}" target="_blank">
+                        <img class="card-img-top img-fluid grow" src="{{ guitar.image.url }}" alt="{{ guitar.name }}">
+                        <figcaption>
+                            {% if wishlist_item %}
+                            <a href="{% url 'remove_from_wishlist' guitar.id %}">remove from wishlist</a>
+                            {% else %}
+                            <a href="{% url 'add_to_wishlist' guitar.id %}">add to wishlist</a>
+                            {% endif %}
+                        </figcaption>
+                    </a>
+                </figure>
                 {% else %}
                 <a href="">
                     <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ guitar.name }}">
+                    <a href="{% url 'add_to_wishlist' guitar.id %}">add to wishlist</a>
+                    <a href="{% url 'remove_from_wishlist' guitar.id %}">remove from wishlist</a>
+
                 </a>
                 {% endif %}
             </div>
         </div>
-        <a href="{% url 'add_to_wishlist' guitar.id %}">add to wishlist</a>
-        <a href="{% url 'remove_from_wishlist' %}">remove from wishlist</a>
         <div class="col-12 col-md-6 col-lg-4 detail-bg">
             <div class="product-details-container mb-5 mt-md-5">
                 <p class="mb-0">{{ guitar.name }}</p>

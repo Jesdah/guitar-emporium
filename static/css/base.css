@@ -166,3 +166,13 @@ https://getcssscan.com/css-box-shadow-examples */
     height: 2px;
 }
 
+figure {
+    position: relative
+  }
+  figcaption {
+    position: absolute;
+    height: 31px;
+    bottom: 0;
+    right: 0;
+    margin: 20px;
+  }
