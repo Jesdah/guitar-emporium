@@ -65,6 +65,23 @@
                     </tbody>
                 </table>
             </div>
+            <p class="padding-top">Wish List</p>
+            <div>
+                <table class="table-sm table-effect">
+                    <thead>
+                        <tr>
+                            <th>Items</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for wishlist in wishlist_item %}
+                        <tr>
+                            <td>{{ wishlist.wishlist_item }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
         </div>
     </div>
     {% endblock %}

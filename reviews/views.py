@@ -10,12 +10,15 @@ from .models import Reviews
 @login_required
 def add_review(request, guitar_id):
     """ A view to return the review page """
+    if not request.user.is_authenticated:
+        messages.error(request, 'Sorry, Please login.')
+        return redirect(reverse('home'))
     queryset = Guitar.objects.filter()
     guitar = get_object_or_404(queryset, id=guitar_id)
-    # reviews = guitar.reviews.filter()
+
     review = Reviews.guitar
     review_form = ReviewsForm(request.POST)
-    # user = get_object_or_404(User, pk=author_id)
+
     if review_form.is_valid():
         review = review_form.save(commit=False)
         review.guitar = guitar
@@ -32,13 +35,3 @@ def add_review(request, guitar_id):
 
     return render(request, template, context)
 
-
-# def view_review(request, guitar_id):
-#     """Display customer reviews and filters them by guitar_id"""
-
-#     reviews = Reviews.objects.filter(guitar=guitar_id)
-#     context = {
-#         'guitar_reviews': reviews
-#     }
-
-#     return render(request, 'reviews/view_review.html', context)
