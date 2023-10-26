@@ -12,7 +12,7 @@ from wish_list.models import WishList
 def profile(request):
     """ Display the user's profile. """
     profile = get_object_or_404(UserProfile, user=request.user)
-    wishlist_item = WishList.objects.all()
+    wishlist_item = WishList.objects.filter(user_id=request.user)
 
     if request.method == 'POST':
         form = UserProfileForm(request.POST, instance=profile)

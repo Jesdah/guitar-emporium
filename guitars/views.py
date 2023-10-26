@@ -68,7 +68,7 @@ def guitar_detail(request, guitar_id):
 
     guitar = get_object_or_404(Guitar, pk=guitar_id)
     reviews = Reviews.objects.filter(guitar=guitar_id)
-    wishlist_item = WishList.objects.filter(wishlist_item_id=guitar_id)
+    wishlist_item = WishList.objects.filter(wishlist_item_id=guitar_id, user=request.user)
     context = {
         'guitar': guitar,
         'guitar_reviews': reviews,

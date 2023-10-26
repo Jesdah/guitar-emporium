@@ -15,12 +15,12 @@ def add_to_wishlist(request, guitar_id):
         messages.error(request, 'Sorry, Please login.')
         return redirect(reverse('home'))
     guitar = get_object_or_404(Guitar, pk=guitar_id)
-    wishlist_item = WishList.objects.get_or_create(wishlist_item=guitar,
-    id=guitar.id,user=request.user)
+    wishlist_item = WishList.objects.get_or_create(wishlist_item=guitar, user=request.user)
     messages.success(request, 'Guitar added to your wishlist!')
 
     context = {
         'wishlist_item': wishlist_item,
+        'on_profile_page': True,
     }
     return redirect(reverse('guitar_detail', args=[guitar.id]),
      request, 'guitars/guitar_detail.html', context)
@@ -32,6 +32,6 @@ def remove_from_wishlist(request, guitar_id):
         messages.error(request, 'Sorry, Please login.')
         return redirect(reverse('home'))
     guitar = get_object_or_404(Guitar, pk=guitar_id)
-    WishList.objects.filter(wishlist_item_id=guitar_id).delete()
+    WishList.objects.filter(wishlist_item_id=guitar_id, user_id=request.user).delete()
     messages.success(request, 'Guitar removed from your wishlist!')
     return redirect(reverse('guitar_detail', args=[guitar.id]))
