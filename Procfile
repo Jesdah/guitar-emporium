@@ -1,1 +1,1 @@
-web: gunicorn guitar-emporium.wsgi
+web: gunicorn guitar_emporium.wsgi
