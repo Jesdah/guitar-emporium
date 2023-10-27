@@ -28,7 +28,7 @@
                     {% csrf_token %}
                     {{ form|crispy }}
                     <div class="text-right">
-                        <a class="btn text-white" href="{% url 'guitars' %}">Cancel</a>
+                        <a class="btn text-white" href="{% url 'guitar_detail' guitar.id %}">Cancel</a>
                         <button class="btn accept-btn" type="submit">Submit</button>
                     </div>
                 </form>

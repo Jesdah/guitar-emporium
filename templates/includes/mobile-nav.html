@@ -1,5 +1,5 @@
 <div class="dropdown-center burger-mobile">
-    <a type="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-bars"></i>
+    <a href="#" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-bars"></i>
     </a>
     <ul class="dropdown-menu">
         <li class="nav-item">
@@ -20,7 +20,9 @@
         <li class="nav-item">
             <a href="#" class="dropdown-item">My Profile</a>
         </li>
-        <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
+        <li class="nav-item">
+            <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
+        </li>
         {% else %}
         <li class="nav-item">
             <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
@@ -29,24 +31,23 @@
             <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
         </li>
         {% endif %}
-        <div class="d-block d-sm-block d-md-none">
-            <li class="list-inline-item">
-              <a class="{% if grand_total %}text-info font-weight-bold{% else %}{% endif %} nav-link" href="{% url 'view_cart'%}">
-                <div class="text-center">
-                  <div><i class="fa-solid fa-cart-shopping"></i></div>
-                  <p class="my-0">
-                    {% if grand_total %}
-                    ${{ grand_total|floatformat:2 }}
-                    {% else %}
-                    $0.00
-                    {% endif %}
-                  </p>
+        <li class="d-block d-sm-block d-md-none">
+            <a class="{% if grand_total %}text-info font-weight-bold{% else %}{% endif %} nav-link"
+                href="{% url 'view_cart'%}">
+                <div class="px-3">
+                    <div><i class="fa-solid fa-cart-shopping"></i></div>
+                    <p class="my-0">
+                        {% if grand_total %}
+                        ${{ grand_total|floatformat:2 }}
+                        {% else %}
+                        $0.00
+                        {% endif %}
+                    </p>
                 </div>
-              </a>
-            </li>
-          </div>
-        <div class="col-12 col-lg-4 my-auto py-1 py-lg-0" id="search-bar">
-            <form method="GET" action="">
+            </a>
+        </li>
+        <li class="col-12 col-lg-4 my-auto py-1 py-lg-0">
+            <form method="GET" action="{% url 'guitars' %}">
                 <div class="input-group w-100">
                     <input class="form-control border rounded-0" type="text" name="q" placeholder="Search our site">
                     <div class="input-group-append">
@@ -58,7 +59,7 @@
                     </div>
                 </div>
             </form>
-        </div>
+        </li>
     </ul>
 
 </div>

@@ -7,6 +7,9 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="guitar shop online">
+  <meta name="keywords" content="custom, guitar, musicshop, exclusive, handmade, handmade guitars, 
+    ecommers, custom guitars">
   {% endblock %}
 
   {% block extra_meta %}
@@ -74,12 +77,12 @@
             <a class="nav-link" href="{% url 'guitars' %}">Guitars</a>
           </li>
           <li class="list-inline-item dropdown">
-            <a class="nav-link" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <a class="nav-link" href="#" data-bs-toggle="dropdown" aria-expanded="false">
               <div class="text-center">
                 <p class="my-0">My Account</p>
               </div>
             </a>
-            <div class="dropdown-menu border-0" aria-labelledby="user-options">
+            <div class="dropdown-menu border-0">
               {% if request.user.is_authenticated %}
               {% if request.user.is_superuser %}
               <a href="{% url 'add_guitar' %}" class="dropdown-item">Product Management</a>
@@ -97,8 +100,8 @@
           </li>
         </ul>
       </div>
-      <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 nav d-none d-lg-flex" id="search-bar">
-        <form method="GET" action="">
+      <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 nav d-none d-lg-flex search-bar">
+        <form method="GET" action="{% url 'guitars' %}">
           <div class="input-group w-100">
             <input class="form-control border rounded-0" type="text" name="q" placeholder="Search our site">
             <div class="input-group-append">
@@ -112,49 +115,7 @@
         </form>
       </div>
       <div class="d-flex align-items-center justify-content-between">
-        <details class="d-lg-none">
-          <summary class="mobile-summary pe-1"><i class="fa-regular fa-envelope fa-2xl"></i></summary>
-          <div id="mc_embed_shell" class="details-mobile">
-            <link href="//cdn-images.mailchimp.com/embedcode/classic-061523.css" rel="stylesheet" type="text/css">
-            <div id="mc_embed_signup">
-              <form
-                action="https://gitpod.us21.list-manage.com/subscribe/post?u=9919a2e14f757139e6c21c3db&amp;id=80af54f3b8&amp;f_id=009ee1e6f0"
-                method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate"
-                target="_blank">
-                <div id="mc_embed_signup_scroll">
-                  <h2>Subscribe</h2>
-                  <div class="indicates-required"><span class="asterisk">*</span> indicates required</div>
-                  <div class="mc-field-group"><label for="mce-EMAIL">Email Address <span
-                        class="asterisk">*</span></label><input type="email" name="EMAIL" class="required email"
-                      id="mce-EMAIL" required="" value=""></div>
-                  <div id="mce-responses" class="clear foot">
-                    <div class="response" id="mce-error-response" style="display: none;"></div>
-                    <div class="response" id="mce-success-response" style="display: none;"></div>
-                  </div>
-                  <div aria-hidden="true" style="position: absolute; left: -5000px;">
-                    <!-- /* real people should not fill this in and expect good things - do not remove this or risk form bot
-                signups */ -->
-                    <input type="text" name="b_9919a2e14f757139e6c21c3db_80af54f3b8" tabindex="-1" value="">
-                  </div>
-                  <div class="optionalParent">
-                    <div class="clear foot">
-                      <input type="submit" name="subscribe" id="mc-embedded-subscribe" class="button" value="Subscribe">
-                      <p style="margin: 0px auto;"><a href="http://eepurl.com/iCyq62"
-                          title="Mailchimp - email marketing made easy and fun"><span
-                            style="display: inline-block; background-color: transparent; border-radius: 4px;"><img
-                              class="refferal_badge"
-                              src="https://digitalasset.intuit.com/render/content/dam/intuit/mc-fe/en_us/images/intuit-mc-rewards-text-dark.svg"
-                              alt="Intuit Mailchimp"
-                              style="width: 220px; height: 40px; display: flex; padding: 2px 0px; justify-content: center; align-items: center;"></span></a>
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </form>
-            </div>
-          </div>
-        </details>
-        <div class="d-none d-md-flex d-lg-flex">
+        <ul class="d-none d-md-flex d-lg-flex">
           <li class="list-inline-item">
             <a class="{% if grand_total %}text-info font-weight-bold{% else %}{% endif %} nav-link"
               href="{% url 'view_cart'%}">
@@ -170,8 +131,9 @@
               </div>
             </a>
           </li>
-        </div>
+        </ul>
       </div>
+    </div>
   </header>
 
   {% if messages %}
@@ -230,8 +192,8 @@
   </div>
   <footer class="fixed-bottom">
     <div class="d-flex justify-content-around align-items-center">
-      <details class="d-none d-lg-flex">
-        <summary>Subscribe to our newsletter!</summary>
+      <details class="">
+        <summary class="mobile-summary pe-1"><i class="fa-regular fa-envelope fa-2xl"></i></summary>
         <div id="mc_embed_shell" class="text-black">
           <link href="//cdn-images.mailchimp.com/embedcode/classic-061523.css" rel="stylesheet" type="text/css">
           <div id="mc_embed_signup">
@@ -272,23 +234,25 @@
           </div>
         </div>
       </details>
-      <div class="footer-text">
+      <div class="footer-text d-none d-lg-block">
         Don't see anything you like?<br><a href="{% url 'custom' %}">We help you create your custom
           guitar!</a>
       </div>
       <div>
         <div id="social-div">
           <p class="footer-text">Keep rocking on Facebook</p>
-          <a href="#" target="_blank"><i class="fa-brands fa-square-facebook"></i></a>
+          <a href="https://www.facebook.com/profile.php?id=61552587973021" target="_blank" aria-label="Our Facebook page."><i
+              class="fa-brands fa-square-facebook"></i></a>
         </div>
       </div>
     </div>
   </footer>
   {% block postloadjs %}
-  <script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script>
-  <script
-    type="text/javascript">(function ($) { window.fnames = new Array(); window.ftypes = new Array(); fnames[0] = 'EMAIL'; ftypes[0] = 'email'; fnames[1] = 'FNAME'; ftypes[1] = 'text'; fnames[2] = 'LNAME'; ftypes[2] = 'text'; fnames[3] = 'ADDRESS'; ftypes[3] = 'address'; fnames[4] = 'PHONE'; ftypes[4] = 'phone'; fnames[5] = 'BIRTHDAY'; ftypes[5] = 'birthday'; }(jQuery)); var $mcj = jQuery.noConflict(true);</script>
-  <script type="text/javascript">
+  <script src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script>
+  <script>
+  (function ($) { window.fnames = new Array(); window.ftypes = new Array(); fnames[0] = 'EMAIL'; ftypes[0] = 'email'; fnames[1] = 'FNAME'; ftypes[1] = 'text'; fnames[2] = 'LNAME'; ftypes[2] = 'text'; fnames[3] = 'ADDRESS'; ftypes[3] = 'address'; fnames[4] = 'PHONE'; ftypes[4] = 'phone'; fnames[5] = 'BIRTHDAY'; ftypes[5] = 'birthday'; }(jQuery)); var $mcj = jQuery.noConflict(true);
+  </script>
+  <script>
     $('.toast').toast('show');
 
     // This code was taken from:
@@ -301,7 +265,7 @@
   <!-- When user is inactive a modal will be displayed reminding the user about the cusom service.
     this code was taken from:
     https://stackoverflow.com/questions/53108336/show-popup-when-user-is-inactive-after-5-minutes -->
-  <script type="text/javascript">
+  <script>
 
     var idleTime = 0
 

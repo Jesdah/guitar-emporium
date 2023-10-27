@@ -24,7 +24,7 @@ header#top-header:hover {
 }
 
 
-#search-bar {
+.search-bar {
     width: 200px;
 }
 
