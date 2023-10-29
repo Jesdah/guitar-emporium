@@ -61,22 +61,22 @@
         </a>
 
         <div class="d-lg-none">
-          <!-- dropdown -->
+          <!-- mobile dropdown -->
           {% include 'includes/mobile-nav.html' %}
           <!-- end of dropdown -->
         </div>
 
       </div>
-
+      <!-- Navbar -->
       <div>
-        <ul class="nav d-none d-lg-flex">
-          <li class="nav-item">
+        <ul class="d-none d-lg-flex" id="navbar">
+          <li class="nav-item navigation-obj">
             <a class="nav-link" aria-current="page" href="{% url 'home' %}">Home</a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item navigation-obj">
             <a class="nav-link" href="{% url 'guitars' %}">Guitars</a>
           </li>
-          <li class="list-inline-item dropdown">
+          <li class="list-inline-item dropdown navigation-obj">
             <a class="nav-link" href="#" data-bs-toggle="dropdown" aria-expanded="false">
               <div class="text-center">
                 <p class="my-0">My Account</p>
@@ -95,11 +95,13 @@
               {% endif %}
             </div>
           </li>
-          <li class="nav-item">
+          <li class="nav-item navigation-obj">
             <a class="nav-link" href="{% url 'custom' %}">Custom</a>
           </li>
         </ul>
       </div>
+      <!-- End of navbar -->
+      <!-- Searchbar -->
       <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 nav d-none d-lg-flex search-bar">
         <form method="GET" action="{% url 'guitars' %}">
           <div class="input-group w-100">
@@ -114,6 +116,8 @@
           </div>
         </form>
       </div>
+      <!-- End of searchbar -->
+      <!-- Cart symbol -->
       <div class="d-flex align-items-center justify-content-between">
         <ul class="d-none d-md-flex d-lg-flex">
           <li class="list-inline-item">
@@ -134,6 +138,7 @@
         </ul>
       </div>
     </div>
+    <!-- End of cart symbol -->
   </header>
 
   {% if messages %}
@@ -156,7 +161,7 @@
 
   {% block content %}
   {% endblock %}
-  <!-- Scrollable modal -->
+  <!-- Scrollable Review modal -->
   <div class="modal" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
       <div class="modal-content side-content">
@@ -173,7 +178,7 @@
       </div>
     </div>
   </div>
-
+<!-- Popup modal -->
   <div class="modal" id="myModal" tabindex="-1">
     <div class="modal-dialog ">
       <div class="modal-content side-content">
@@ -190,10 +195,12 @@
       </div>
     </div>
   </div>
+  <!-- End of popupmodal -->
   <footer class="fixed-bottom">
     <div class="d-flex justify-content-around align-items-center">
-      <details class="">
-        <summary class="mobile-summary pe-1"><i class="fa-regular fa-envelope fa-2xl"></i></summary>
+      <!-- Newsletter -->
+      <details>
+        <summary class="pe-1"><i class="fa-regular fa-envelope fa-2xl"></i></summary>
         <div id="mc_embed_shell" class="text-black">
           <link href="//cdn-images.mailchimp.com/embedcode/classic-061523.css" rel="stylesheet" type="text/css">
           <div id="mc_embed_signup">
@@ -234,6 +241,7 @@
           </div>
         </div>
       </details>
+      <!-- End of Newsletter -->
       <div class="footer-text d-none d-lg-block">
         Don't see anything you like?<br><a href="{% url 'custom' %}">We help you create your custom
           guitar!</a>

@@ -13,7 +13,7 @@ from .forms import GuitarForm
 
 
 def all_guitars(request):
-    """ A view to show all products, including sorting and search queries """
+    """ A view to show all guitars, including sorting and search queries """
 
     guitars = Guitar.objects.all()
     query = None
@@ -65,10 +65,11 @@ def guitar_detail(request, guitar_id):
     """ A view to show individual Guitar details and display reviews
     and filter the by guitar_id.
      """
-
+    wishlist_item = None
     guitar = get_object_or_404(Guitar, pk=guitar_id)
     reviews = Reviews.objects.filter(guitar=guitar_id)
-    wishlist_item = WishList.objects.filter(wishlist_item_id=guitar_id, user=request.user)
+    if request.user.is_authenticated:
+        wishlist_item = WishList.objects.filter(wishlist_item_id=guitar_id, user=request.user)
     context = {
         'guitar': guitar,
         'guitar_reviews': reviews,
