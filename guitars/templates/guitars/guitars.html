@@ -83,7 +83,7 @@
                                             {% if request.user.is_superuser %}
                                                 <small class="ml-3">
                                                     <a href="{% url 'edit_guitar' guitar.id %}">Edit</a> | 
-                                                    <a class="text-danger" href="{% url 'delete_guitar' guitar.id %}">Delete</a>
+                                                    <a class="text-danger" href="{% url 'delete_guitar' guitar.id %}" onclick="return confirm('Are you sure you want to delete {{ guitar.name }}?')">Delete</a>
                                                 </small>
                                             {% endif %}
                                         </div>

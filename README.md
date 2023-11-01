@@ -14,71 +14,70 @@ The content of the page mainly consists of a large background image where we see
 The aim is to trigger curiosity in the user and give an impression of quality and seriousness.
 
 
-### Add Adventure.
+### Guitars Page.
 ![screenshot of add adventure page.](/static/images/ganaga-travel-add-adventure.png)<br>
-The user clicks on New Adventure and is welcomed by a form where the user must fill in the name of the adventure, the date and possibly choose a picture. if no image is selected, a default image is used instead. When the user is finished, he or she presses the send button and is sent back to the homepage.
+On the guitar page we see cards with a linked image, title, price, category and if you are a superuser there is a link to edit and delete.
+On the page, it is possible to sort the assortment according to certain criteria. At the top it shows how many guitars match the search, to go back to the standard page there is a link that resets the search.
 
-### Edit Adventure.
+### Edit Guitar.
 ![Screenshot of edit adventure page](/static/images/ganaga-travel-edit-adventure.png)<br>
 ![Screenshot of message text](/static/images/ganaga-travel-message.png)<br>
 
-If the user presses Edit, the user is greeted by a form, it is already filled in, but the user can delete or add text or an image. When the user is satisfied with the changes, he or she presses send and is sent back to the homepage.
+On the page, old information is already entered and a superuser can then freely change the fields without going through the admin panel.
 
-### Delete Adventure.
+### Delete Guitar.
 ![Screenshot of the popup](/static/images/ganaga-travel-delete-popup.png)<br>
-If the user presses Delete, a pop-up window appears asking the user if they want to delete this adventure, if the user presses yes, the adventure is deleted, if the user presses no, the process is canceled.
+If the user presses Delete, a pop-up window appears asking the user if they want to delete this guitar, if the user presses yes, the guitar is deleted, if the user presses no, the process is canceled.
 
-### Destinations.
+### Guitar Details.
 ![Screenshot of the Destination page](/static/images/ganaga-travel-destination.png)<br>
-When the user has pressed one of the titles on the adventure page, they are welcomed by the destination page. Here you can see the title of the adventure so that the user does not forget which one they are in.
-The different destinations are presented in different cards with an image, title, text box, when it was created, when it was last updated and two buttons for edit and delete.
-<br>
-Here I have chosen to use large and complete images because I want users to be able to see these images and really feel excitement and longing for the trip they are going to take with their friends or family.
-<br>
-Further down the page is the comment section, they are sorted from oldest to newest to create a conversation and it shows which user has written the comment. Users can delete comments, but only those that you have written yourself. And at the bottom there is a button to add new destinations. All buttons are only visible to users who are authorized to use these functions.
+When the user clicks on one of the guitars, the reader is taken to the detailed page. Here we only see a guitar with a picture and a detailed description, at the bottom the user can add the product to the shopping cart or see reviews. Superusers can edit or delete an item and a logged in user can leave a review.
 
-### Add Destination.
+### Add Guitar.
 ![Screenshot of the add destination page](/static/images/ganaga-travel-new-destination-modal.png)<br>
-If the user clicks on a new destination, a pop-up window appears at the destination page. The user then presses send and the box closes down. Should the user regret it, the form will be closed if the user presses anywhere outside the box.
+If the user is a superuser, the user can press "Product Management" in the navigation tab and the user will be taken to a page to add a product. The user writes in the fields and adds an image and presses "add" and the user is taken back to the guitar page.
 
-### Edit Destination.
+### Add a Review.
+A logged in user can add a review which is accessible through the details page and anonymous users can see the reviews.
+
+### Profile.
 ![Screenshot of the edit destination page](/static/images/ganaga-travel-edit-destination.png)<br>
-When the user has pressed edit, a form is displayed that has already been filled in, here you can change the title, text or image. When the user is satisfied with the changes, they press send and are sent back to the destination page.
+If the user is logged in, the user gets access to a profile page that can be found in the navigation tab. Here, the user can view and update their information and keep track of the order history and which items have been added to the wish list.
 
-### Delete Destination.
-If the user presses Delete, a pop-up window appears asking the user if they want to delete this destination, if the user presses yes, the destination is deleted, if the user presses no, the process is canceled.
-
-### Add Comment.
+### Order History.
 ![Screenshot of the add comment page](/static/images/ganaga-travel-add-comment.png)<br>
-When the user presses add comment, a page opens that allows the user to fill in what he wants to say, when finished, the user presses send and is sent back to the destination page.
+On the profile page, in the order history section, there is a link that takes you to a page that shows the entire order including email, address, what you have bought and price as some examples.
 
-### Delete Comment.
-If the user presses Delete, a pop-up window appears asking the user if they want to delete this comment, if the user presses yes, the comment is deleted, if the user presses no, the process is canceled.
+### Custom Workshop.
+In the navigation tab we find the "Custom" link and it takes us to the "Custom Workshop" page. Here, users can submit their information to receive a booked consultation for a special order to build the customer's dream guitar.
+
+### Shopping Cart.
+All items that the customer has added to their shopping cart are collected here. Here the customer can add or remove items and when the customer feels satisfied, the customer presses "Secure Checkout".
+
+### Checkout.
+Here the customer can fill in their information and see their shopping cart, if the customer wants to change something, the customer can quickly go back to the shopping cart page or the customer can complete their payment through STRIPE.
 
 ### Header.
 ![Screenshot of logo](/static/images/ganaga-travel-logo.png)<br>
-The header contains a title and links to the home page and log out. If a user is not logged in, links for logging in or registering an account are visible.
+It consists of Title, navigation tab with home, guitars, profile and custom links after which comes a search field followed by a shopping cart.
 <br>
-I have copied the style for the header from the code institute's walkthrough project because I thought it was neat and clean, but I have added my own logo.
-<br>
-The header is identical on all pages.
+The Header is identical on all pages.
 
 ### Footer.
-I have copied the style for the footer from the code institute's walkthrough project because I thought it was neat and clean.
+My Footer is brown and transparent and in the footer there is a field so the customer can register to receive newsletters, here there is also a link to the Custom workshop page and a link to the company's Facebook page.
 <br>
 The footer is identical on all pages.
+
+### Facebook Page.
+
+
 ### Userstories.
 ![Screenshot of Userstories](/static/images/ganaga-travel-userstories.png)<br>
 I have used the agile principle when I have planned and built my site.
 
 ### Lucidchart.
 ![Screenshot of Lucidchart](/static/images/ganaga-travel-lucidchart.png)<br>
-The user is greeted by a message that says "you have no adventures" followed by a button that prompts the user to add new adventures.
-When a new adventure is created, the user can edit or delete the adventure, the user clicks on the title of the adventure and it takes them to the destination page.
-Here the user is met again with a prompt to add new destinations, once a destination has been created the user can edit or delete the destination.
-<br>
-When the user has created an adventure, the user can click on the title of the adventure, which leads the user to the destination page, here only destinations and comments that share the "adventure_id" with the adventure they have just clicked on are displayed.
-If the user creates a new adventure, only destinations and comments related to that adventure will be displayed. 
+Lucidchart has been used at an early stage to facilitate an overview of how data should flow between the various apps.
 
 ### Existing features.
 * Responsive design
@@ -92,9 +91,12 @@ If the user creates a new adventure, only destinations and comments related to t
 * Add data
 * Change data
 * Delete data
+* STRIPE
+* webhooks
+* Mail Chimp Newsletter
+* AWS Bucket
 
 ### Features left to implement.
-I would like to add the ability to add googlemaps in the future.
 
 ### Technologies.
 * HTML
@@ -115,12 +117,15 @@ I would like to add the ability to add googlemaps in the future.
     * The site was developed using Python.
 * Heroku
     * The site was delpoyed using Heroku App.
+* STRIPE
+    * Stripe has been used to make finactial transactions.
+* Mail Chimp
+    * Mail chimp has been used to let users sign up for newsletters.
+* AWS Bucket
+    * Used for storage of static files
 
 # Testing.
 
-## Unit Test.
-Automated tests have been created to ensure that the functions of Views.py work as intended.<br>
-These can be found in the tests.py
 
 ## Manual Test.
 ### Responsivenes.
@@ -142,102 +147,164 @@ Website is responsive on all screen sizes and no images are pixelated or stretch
 ## Lighthouse Testing.
 ![screenshot of lighthouse score](/static/images/ganaga-travel-lighthouse.png)<br>
 
-## Adventure Testing.
-Adventure's page has been tested to ensure that users can add, change and delete without problems, without error messages.<br>
+## Site Testing.
+The site has been tested to ensure that users can add, change and delete without problems, without error messages.<br>
+
+### 1. Test as anonymous user.
 Steps to test:
-1. Navigate to [Ganga Travel.](https://ganga-travel-5947dd277fb2.herokuapp.com/)<br>
-2. Add Adventure:
-   - Click: New Adventure
-   - Render: add_adventure.html
-   - Fill in the form
-        - Name: New Adventure
-        - Date: 2023-08-31
-        - Featured_image: image
-   - Click: Send
-   - New Adventure is added to adventure page.
-   - Render Django message "New Adventure created"
-3. Edit Adventure:
-    - Click: The blue Edit button.
-    - Render: edit_adventure.html
-    - Fill in the form
-        - Name: New Adventure to Edited Adventure
-        - Date: 2023-08-31 to 2023-08-28
-        - Featured_image: image to image2
-    - Click: Send
-    - New Adventure is changed to Edited Adventure.
-    - Render Django message "Adventure Changed"
-4. Delete Adventure:
-    - Click: The red Delete button.
-    - Render popup: Are you sure you want to delete Edited Adventure?
-    - Press Cancel:
-        - The delete function is canceled.
-    - Press OK:
-        - Edited Adventure is deleted.
-    - Render adventure page.
-    - Render Django message "Adventure deleted" 
+1. Navigate to [Guitar emporium.](https://ganga-travel-5947dd277fb2.herokuapp.com/)<br>
+2. Home Page:
+   1. Click: All the navlinks.
+        1. Title - Satisfactory
+        2. Home - Satisfactory
+        3. Guitars - Satisfactory
+        4. My Account - Satisfactory
+        5. Cart - Satisfactory
+3. Click "Guitars"
+   1. Enter searchfield: "Blue"
+        - 2st results
+    2. Enter searchfield: "Test"
+        - 3st results
+        - Added guitar with name: Test is displayed
+    3. Sort
+        1. Price (low to high) - Satisfactory
+        2. Price (high to low) - Satisfactory
+        3. Name (A-Z) - Satisfactory
+        4. Name (Z-A) - Satisfactory
+4. Buy a Guitar:
+    1. Click on a image
+    2. View a Review
+    3. Add to Cart
+5. Go to Cart:
+    1. Update quantity
+    2. Remove Item
+    3. Do step 4.1 to 4.3 again
+6. Click "Secure Checkout"
+    1. Fill in information
+    2. Complete the purchase
+7. Do steps 1.0 to 6.2 again in mobile view.
 <br>
 
-## Destination Testing.
+### 2. Test as loggedin user.
 
-Destination's page has been tested to ensure that users can add, change and delete without problems, without error messages.<br>
 Steps to test:
-1. Navigate to [Destination page](https://ganga-travel-5947dd277fb2.herokuapp.com/8/2/)
-2. Add Destination:
-   - Click: New Destination
-   - Render: post_form Modal
-   - Fill in the form
-        - Title: New Destination
-        - Content: This is a Destination
-        - Featured_image: image
-   - Click: Send
-   - New Destination is added to destination page.
-   - Render Django message "New Destination created"
-3. Edit Destination:
-    - Click: The blue Edit button.
-    - Render: edit_post.html
-    - Fill in the form
-        - Title: New Destination to Edited Destination
-        - Content: This is a Destination to This is a Edited Destination
-        - Featured_image: image to image2
-    - Click: Send
-    - New Destination is changed to Edited Destination.
-    - Render Django message "Destination Changed"
-4. Delete Destination:
-    - Click: The red Delete button.
-    - Render popup: Are you sure you want to delete Edited Destination?
-    - Press Cancel:
-        - The delete function is canceled.
-    - Press OK:
-        - Edited Destination is deleted.
-    - Render Destination page.
-    - Render Django message "Destination deleted" 
+1. Navigate to [Guitar emporium.](https://ganga-travel-5947dd277fb2.herokuapp.com/)<br>
+2. Home Page:
+   1. Click: All the navlinks.
+        1. Title - Satisfactory
+        2. Home - Satisfactory
+        3. Guitars - Satisfactory
+        4. My Account - Satisfactory
+        5. Cart - Satisfactory
+3. Click "Guitars"
+   1. Enter searchfield: "Blue"
+        - 2st results
+    2. Enter searchfield: "Test"
+        - 3st results
+        - Added guitar with name: Test is displayed
+    3. Sort
+        1. Price (low to high) - Satisfactory
+        2. Price (high to low) - Satisfactory
+        3. Name (A-Z) - Satisfactory
+        4. Name (Z-A) - Satisfactory
+4. Buy a Guitar:
+    1. Click on a image
+    2. Add to Wishlist - Heart symbol is red
+        1. Follow step 7.
+        2. Make sure a new item is added in Wishlist
+        3. Go back to Wishlisted Guitar.
+    3. Remove from Wishlist - heart symbol is transparent
+        1. Follow step 7.
+        2. Make sure the item is removed from Wishlist
+        3. Go back to Guitar.
+    4. View a Review
+    5. Add a Review
+    6. Add to Cart
+5. Go to Cart:
+    1. Update quantity
+    2. Remove Item
+    3. Do step 4.1 to 4.3 again
+6. Click "Secure Checkout"
+    1. Fill in information
+    2. Complete the purchase
+7. Go to Profile under My Account
+    1. View Order history
+    2. View Wish listed items
+
+8. Do steps 1.0 to 7.2 again in mobile view.
 <br>
 
-## Comment Testing.
-
-Comment section has been tested to ensure that users can add and delete without problems, without error messages.<br>
+### Test as a superuser.
 
 Steps to test:
+1. Navigate to [Guitar emporium.](https://ganga-travel-5947dd277fb2.herokuapp.com/)<br>
+2. Home Page:
+   1. Click: All the navlinks.
+        1. Title - Satisfactory
+        2. Home - Satisfactory
+        3. Guitars - Satisfactory
+        4. My Account - Satisfactory
+        5. Cart - Satisfactory
+3. Click "Guitars"
+   1. Enter searchfield: "Blue"
+        - 2st results
+    2. Enter searchfield: "Test"
+        - 3st results
+        - Added guitar with name: Test is displayed
+    3. Sort
+        1. Price (low to high) - Satisfactory
+        2. Price (high to low) - Satisfactory
+        3. Name (A-Z) - Satisfactory
+        4. Name (Z-A) - Satisfactory
+    4. Edit Guitar
+        1. Change all the fields
+        2. Click update
+        3. Info message is displayed
+    5. Delete Guitar
+        1. Click Delete
+        2. popup message is displayed
+            1. Press cancel and the procedure is cancelled.
+            2. Press yes and the product is deleted
+        3. Info message says that a product is deleted
+4. Go to Guitar Details:
+    1. Click on a image
+    2. Add to Wishlist - Heart symbol is red
+        1. Follow step 7.1.
+        2. Make sure a new item is added in Wishlist
+        3. Go back to Wishlisted Guitar.
+    3. Remove from Wishlist - heart symbol is transparent
+        1. Follow step 7.1.
+        2. Make sure the item is removed from Wishlist
+        3. Go back to Guitar.
+    4. View a Review
+    5. Add a Review
+    6. Edit Guitar
+        1. Change all the fields
+        2. Click update
+        3. Info message is displayed
+    7. Delete Guitar
+        1. Click Delete
+        2. popup message is displayed
+            1. Press cancel and the procedure is cancelled.
+            2. Press yes and the product is deleted
+        3. Info message says that a product is deleted
+    8. Add to Cart
+5. Go to Cart:
+    1. Update quantity
+    2. Remove Item
+    3. Do step 4.1 to 4.3 again
+6. Click "Secure Checkout"
+    1. Fill in information
+    2. Complete the purchase
+7. Go to My Account
+    1. Click Profile
+        1. View Order history
+        2. View Wish listed items
+    2. Click Product Management
+        1. Fill in the form to add a new product
+        2. View the new product by clicking guitars in the navbar
 
-1. Navigate to [Destination page](https://ganga-travel-5947dd277fb2.herokuapp.com/8/2/)
-2. Add Comment:
-   - Click: Comment
-   - Render: add_comment.html
-   - Fill in the form
-        - Body: This is a comment!
-   - Click: Send
-   - New Comment is added to destination page.
-   - Render Comment:
-        - Body: This is a comment!
-        - Comment author: Admin
-3. Delete Comment:
-    - Click: The red Delete button.
-    - Render popup: Are you sure you want to delete this Comment?
-    - Press Cancel:
-        - The delete function is canceled.
-    - Press OK:
-        - comment is deleted.
-    - Render Destination page.
+8. Do steps 1.0 to 7.2 again in mobile view.
 <br>
 
 ## Create, modify and delete as a non-authorized user.
