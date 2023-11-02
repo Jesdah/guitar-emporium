@@ -38,6 +38,7 @@ When the user clicks on one of the guitars, the reader is taken to the detailed 
 If the user is a superuser, the user can press "Product Management" in the navigation tab and the user will be taken to a page to add a product. The user writes in the fields and adds an image and presses "add" and the user is taken back to the guitar page.
 
 ### Add a Review.
+![Screenshot of Lucidchart](/static/images/ganaga-travel-lucidchart.png)<br>
 A logged in user can add a review which is accessible through the details page and anonymous users can see the reviews.
 
 ### Profile.
@@ -49,12 +50,15 @@ If the user is logged in, the user gets access to a profile page that can be fou
 On the profile page, in the order history section, there is a link that takes you to a page that shows the entire order including email, address, what you have bought and price as some examples.
 
 ### Custom Workshop.
+![Screenshot of Lucidchart](/static/images/ganaga-travel-lucidchart.png)<br>
 In the navigation tab we find the "Custom" link and it takes us to the "Custom Workshop" page. Here, users can submit their information to receive a booked consultation for a special order to build the customer's dream guitar.
 
 ### Shopping Cart.
+![Screenshot of Lucidchart](/static/images/ganaga-travel-lucidchart.png)<br>
 All items that the customer has added to their shopping cart are collected here. Here the customer can add or remove items and when the customer feels satisfied, the customer presses "Secure Checkout".
 
 ### Checkout.
+![Screenshot of Lucidchart](/static/images/ganaga-travel-lucidchart.png)<br>
 Here the customer can fill in their information and see their shopping cart, if the customer wants to change something, the customer can quickly go back to the shopping cart page or the customer can complete their payment through STRIPE.
 
 ### Header.
@@ -64,11 +68,17 @@ It consists of Title, navigation tab with home, guitars, profile and custom link
 The Header is identical on all pages.
 
 ### Footer.
+![Screenshot of Lucidchart](/static/images/ganaga-travel-lucidchart.png)<br>
 My Footer is brown and transparent and in the footer there is a field so the customer can register to receive newsletters, here there is also a link to the Custom workshop page and a link to the company's Facebook page.
 <br>
 The footer is identical on all pages.
 
+### Reminder.
+![Screenshot of Lucidchart](/static/images/ganaga-travel-lucidchart.png)<br>
+If the user is inactive for 1 minute, a modal pops up reminding the user that the company also offers specially designed guitars and that the form can be found under the Custom link.
+
 ### Facebook Page.
+![Screenshot of Lucidchart](/static/images/ganaga-travel-lucidchart.png)<br>
 
 
 ### Userstories.
@@ -78,6 +88,10 @@ I have used the agile principle when I have planned and built my site.
 ### Lucidchart.
 ![Screenshot of Lucidchart](/static/images/ganaga-travel-lucidchart.png)<br>
 Lucidchart has been used at an early stage to facilitate an overview of how data should flow between the various apps.
+
+### Balsamiq.
+![Screenshot of Lucidchart](/static/images/ganaga-travel-lucidchart.png)<br>
+Balsamiq has been used at an early stage to facilitate an overview of how the site will look like.
 
 ### Existing features.
 * Responsive design
@@ -307,35 +321,17 @@ Steps to test:
 8. Do steps 1.0 to 7.2 again in mobile view.
 <br>
 
-## Create, modify and delete as a non-authorized user.
-
-1. Log in as Jesper with authorization: Creator.
-    - Jesper can create, modify and delete data.
-    - All buttons is visible for this user.
-
-2. Log in as David with authorization: Fellow traveler.
-    - David can create, modify and delete destinations.
-    - Only buttons on Destination page is visible for this user.
-
-* Break in and add adventure or Edit adventure.
-    * Input: https://ganga-travel-5947dd277fb2.herokuapp.com/add/1/
-        - result: Empty screen.
-    * input: https://ganga-travel-5947dd277fb2.herokuapp.com/edit/5/1/
-        - result: Empty screen.
-
-3. Log in as Peter with authorization: Guest.
-    - Peter can view content and add comments.
-    - Only comment button is visible for this user.
-
-* Break in and add adventure or Edit adventure.
-    * Input: https://ganga-travel-5947dd277fb2.herokuapp.com/add/1/
-        - result: Empty screen.
-    * input: https://ganga-travel-5947dd277fb2.herokuapp.com/edit/5/1/
-        - result: Empty screen.
-
-* Break in and Edit adventure.
-    * Input: https://ganga-travel-5947dd277fb2.herokuapp.com/edit_post/6/5/1/
-        - result: Empty screen.
+### Create, modify and delete as a non-authorized user.
+1. Input: /guitar/edit/2/
+    * Result: Error message, redirect to home.
+2. Input: /review/add_review/2/
+    * Result: redirect to login.
+3. Input: /guitars/delete/7/
+    * Result: Error message, redirect to home.
+4. Input: /guitars/add/
+    * Result: Error message, redirect to home.
+5. Input: /profile/
+    * Result: redirect to login.
 ### Expected:
 
 The expectation has been that the site works as it should without broken links and that the user receives feedback in all situations and that unauthorized users cannot get in the back way and change or add data.
@@ -359,9 +355,8 @@ The site works as expected
   ![Jshint result script](/static/images/ganaga-travel-view.png)<br>
 
 ### Bugs.
-When I open the app locally, everything works as expected, but when I open the app in heroku, javascript is not loaded, so some functions do not work.
-
-I solved it by entering the script at the bottom of the relevant HTML page.
+When I created a new account I got the following error message: "no such table: socialaccount_socialapp"<br>
+I solved it by clearing all the migrations and the data base and then migrated again.
 
 ### Unfixed Bugs
 No unfixed bugs.
@@ -399,11 +394,15 @@ Navigate to the GitHub Repository you want to clone to use locally:
 The project will now been cloned on your local machine for use.
 
 ### Credit.
-* I have taken alot of inspiration from "Hello Django" and "I think before i blog"(https://learn.codeinstitute.net/ci_program/diplomainfullstacksoftwarecommoncurriculum)
-
-* The bakground color for the body I got [here](https://www.makeuseof.com/css-background-gradients/)
-
 * I found the Date picker [here](https://stackoverflow.com/questions/3367091/whats-the-cleanest-simplest-to-get-running-datepicker-in-django)
+
+* I got the styling for .accept-btn [here](https://www.sliderrevolution.com/resources/css-button-hover-effects/)
+
+* The hover effect for the detail image comes from [this site](https://thebrandsmen.com/css-image-hover-effects/).
+
+* The boxshadow i got from [here](https://getcssscan.com/css-box-shadow-examples)
+
+* When user is inactive a modal will be displayed reminding the user about the [custom service](https://stackoverflow.com/questions/53108336/show-popup-when-user-is-inactive-after-5-minutes).
 
 * I have used StackOverflow for tips and tricks.
 
