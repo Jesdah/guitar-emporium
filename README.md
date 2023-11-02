@@ -7,7 +7,7 @@ add to wishlist,
 leave a review or contact us for a consultation and we will build the guitar of your dreams.
 
 ### Home.
-![screenshot of Adventures screen](/static/images/ganga-travel-adventure.png)<br>
+![screenshot of Home screen](/media/guitar-emporium-home.png)<br>
 On the home, which is the home page, the user is met by a header, page quote and a footer.
 <br>
 The content of the page mainly consists of a large background image where we see a rock star who is on his way to the stage and in the center is a quote from Bob Dylan and a button that takes the user to the guitar page.
@@ -15,82 +15,86 @@ The aim is to trigger curiosity in the user and give an impression of quality an
 
 
 ### Guitars Page.
-![screenshot of add adventure page.](/static/images/ganaga-travel-add-adventure.png)<br>
+![screenshot of guitars page.](/media/guitar-emporium-guitars.png)<br>
 On the guitar page we see cards with a linked image, title, price, category and if you are a superuser there is a link to edit and delete.
 On the page, it is possible to sort the assortment according to certain criteria. At the top it shows how many guitars match the search, to go back to the standard page there is a link that resets the search.
 
 ### Edit Guitar.
-![Screenshot of edit adventure page](/static/images/ganaga-travel-edit-adventure.png)<br>
-![Screenshot of message text](/static/images/ganaga-travel-message.png)<br>
+![Screenshot of edit guitar page](/media/guitar-emporium-edit-guitar.png)<br>
 
 On the page, old information is already entered and a superuser can then freely change the fields without going through the admin panel.
 
 ### Delete Guitar.
-![Screenshot of the popup](/static/images/ganaga-travel-delete-popup.png)<br>
+![Screenshot of delete message.](/media/guitar-emporium-delete-guitar.png)<br>
 If the user presses Delete, a pop-up window appears asking the user if they want to delete this guitar, if the user presses yes, the guitar is deleted, if the user presses no, the process is canceled.
 
 ### Guitar Details.
-![Screenshot of the Destination page](/static/images/ganaga-travel-destination.png)<br>
+![Screenshot of guitar detail page](/media/guitar-emporium-guitar-details.png)<br>
 When the user clicks on one of the guitars, the reader is taken to the detailed page. Here we only see a guitar with a picture and a detailed description, at the bottom the user can add the product to the shopping cart or see reviews. Superusers can edit or delete an item and a logged in user can leave a review.
 
 ### Add Guitar.
-![Screenshot of the add destination page](/static/images/ganaga-travel-new-destination-modal.png)<br>
+![Screenshot of the add guitar page](/media/guitar-emporium-add-guitar.png)<br>
 If the user is a superuser, the user can press "Product Management" in the navigation tab and the user will be taken to a page to add a product. The user writes in the fields and adds an image and presses "add" and the user is taken back to the guitar page.
 
 ### Add a Review.
-![Screenshot of Lucidchart](/static/images/ganaga-travel-lucidchart.png)<br>
+![Screenshot of add a review page](/media/guitar-emporium-add-review.png)<br>
 A logged in user can add a review which is accessible through the details page and anonymous users can see the reviews.
 
 ### Profile.
-![Screenshot of the edit destination page](/static/images/ganaga-travel-edit-destination.png)<br>
+![Screenshot of the profile page](/media/guitar-emporium-profile.png)<br>
 If the user is logged in, the user gets access to a profile page that can be found in the navigation tab. Here, the user can view and update their information and keep track of the order history and which items have been added to the wish list.
 
 ### Order History.
-![Screenshot of the add comment page](/static/images/ganaga-travel-add-comment.png)<br>
+![Screenshot of order history](/media/guitar-emporium-order-history.png)<br>
 On the profile page, in the order history section, there is a link that takes you to a page that shows the entire order including email, address, what you have bought and price as some examples.
 
 ### Custom Workshop.
-![Screenshot of Lucidchart](/static/images/ganaga-travel-lucidchart.png)<br>
+![Screenshot of Custom workshop page](/media/guitar-emporium-custom.png)<br>
 In the navigation tab we find the "Custom" link and it takes us to the "Custom Workshop" page. Here, users can submit their information to receive a booked consultation for a special order to build the customer's dream guitar.
 
 ### Shopping Cart.
-![Screenshot of Lucidchart](/static/images/ganaga-travel-lucidchart.png)<br>
+![Screenshot of shopping cart](/media/guitar-emporium-shopping-cart.png)<br>
 All items that the customer has added to their shopping cart are collected here. Here the customer can add or remove items and when the customer feels satisfied, the customer presses "Secure Checkout".
 
 ### Checkout.
-![Screenshot of Lucidchart](/static/images/ganaga-travel-lucidchart.png)<br>
+![Screenshot of checkout page](/media/guitar-emporium-checkout.png)<br>
 Here the customer can fill in their information and see their shopping cart, if the customer wants to change something, the customer can quickly go back to the shopping cart page or the customer can complete their payment through STRIPE.
 
 ### Header.
-![Screenshot of logo](/static/images/ganaga-travel-logo.png)<br>
+![Screenshot of header](/media/guitar-emporium-header.png)<br>
 It consists of Title, navigation tab with home, guitars, profile and custom links after which comes a search field followed by a shopping cart.
 <br>
 The Header is identical on all pages.
 
 ### Footer.
-![Screenshot of Lucidchart](/static/images/ganaga-travel-lucidchart.png)<br>
+![Screenshot of the footer](/media/guitar-emporium-footer.png)<br>
 My Footer is brown and transparent and in the footer there is a field so the customer can register to receive newsletters, here there is also a link to the Custom workshop page and a link to the company's Facebook page.
 <br>
 The footer is identical on all pages.
 
 ### Reminder.
-![Screenshot of Lucidchart](/static/images/ganaga-travel-lucidchart.png)<br>
+![Screenshot of the reminder](/media/guitar-emporium-reminder.png)<br>
 If the user is inactive for 1 minute, a modal pops up reminding the user that the company also offers specially designed guitars and that the form can be found under the Custom link.
 
 ### Facebook Page.
-![Screenshot of Lucidchart](/static/images/ganaga-travel-lucidchart.png)<br>
+![Screenshot of Facebook page](/media/facebook-1.png)<br>
+![Screenshot of Facebook page](/media/facebook-2.png)<br>
+![Screenshot of Facebook page](/media/facebook-3.png)<br>
 
 
 ### Userstories.
-![Screenshot of Userstories](/static/images/ganaga-travel-userstories.png)<br>
+![Screenshot of Userstories](/media/guitar-emporium-userstories.png)<br>
 I have used the agile principle when I have planned and built my site.
 
 ### Lucidchart.
-![Screenshot of Lucidchart](/static/images/ganaga-travel-lucidchart.png)<br>
+![Screenshot of Lucidchart](/media/guitar-emporium-lucidshart.png)<br>
 Lucidchart has been used at an early stage to facilitate an overview of how data should flow between the various apps.
 
 ### Balsamiq.
-![Screenshot of Lucidchart](/static/images/ganaga-travel-lucidchart.png)<br>
+![Screenshot of balsamiq mobile concept](/media/guitar-emporium-balsamiq-mobile.png)<br>
+![Screenshot of balsamiq products concept](/media/guitar-emporium-balsamiq-products.png)<br>
+![Screenshot of balsamiq products detail concept](/media/guitar-emporium-balsamiq-product-detail.png)<br>
+![Screenshot of balsamiq color concept](/media/guitar-emporium-balsamiq-colors.png)<br>
 Balsamiq has been used at an early stage to facilitate an overview of how the site will look like.
 
 ### Existing features.
@@ -166,7 +170,7 @@ The site has been tested to ensure that users can add, change and delete without
 
 ### 1. Test as anonymous user.
 Steps to test:
-1. Navigate to [Guitar emporium.](https://ganga-travel-5947dd277fb2.herokuapp.com/)<br>
+1. Navigate to [Guitar emporium.](https://guitar-emporium-8025a898f08c.herokuapp.com/)<br>
 2. Home Page:
    1. Click: All the navlinks.
         1. Title - Satisfactory
@@ -202,7 +206,7 @@ Steps to test:
 ### 2. Test as loggedin user.
 
 Steps to test:
-1. Navigate to [Guitar emporium.](https://ganga-travel-5947dd277fb2.herokuapp.com/)<br>
+1. Navigate to [Guitar emporium.](https://guitar-emporium-8025a898f08c.herokuapp.com/)<br>
 2. Home Page:
    1. Click: All the navlinks.
         1. Title - Satisfactory
@@ -251,7 +255,7 @@ Steps to test:
 ### Test as a superuser.
 
 Steps to test:
-1. Navigate to [Guitar emporium.](https://ganga-travel-5947dd277fb2.herokuapp.com/)<br>
+1. Navigate to [Guitar emporium.](https://guitar-emporium-8025a898f08c.herokuapp.com/)<br>
 2. Home Page:
    1. Click: All the navlinks.
         1. Title - Satisfactory
@@ -342,14 +346,14 @@ The site works as expected
 ### Validator Testing
 - HTML
   - No errors were returned when passing through the official [W3C validator](https://validator.w3.org)<br>
-  ![validator result index.html](/static/images/ganga-travel-index-validation.png)<br>
+  ![validator result index.html](/media/guitar-emporium-html-validator.png)<br>
 
 - CSS
   - No errors were found when passing through the official [(Jigsaw) validator](https://jigsaw.w3.org)<br>
-  ![validator result style.css](/static/images/ganaga-travel-css-validator.png)<br>
+  ![validator result style.css](/media/guitar-emporium-css-validator.png)<br>
 
   - No errors were found when passing through the official [Jshint linter](https://jshint.com/)<br>
-  ![Jshint result script](/static/images/ganaga-travel-js-validator.png)<br>
+  ![Jshint result script](/media/guitar-emporium-jshint.png)<br>
 
   - No errors were found when passing through [CI Python Linter](https://pep8ci.herokuapp.com/#)
   ![Jshint result script](/static/images/ganaga-travel-view.png)<br>
@@ -382,7 +386,7 @@ The following git commands were used throughout development to push code to the 
 10. Click enable automatic deploys and then deploy branch.
 11. Wait for the app to build and then click on the "View" link. 
 
-The live link can be found [here](https://ganga-travel-5947dd277fb2.herokuapp.com/).
+The live link can be found [here](https://guitar-emporium-8025a898f08c.herokuapp.com/).
 
 ### Clone the Repository Code Locally
 Navigate to the GitHub Repository you want to clone to use locally:
