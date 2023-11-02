@@ -101,8 +101,9 @@
         </ul>
       </div>
       <!-- End of navbar -->
-      <!-- Searchbar -->
-      <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 nav d-none d-lg-flex search-bar">
+      <div class="d-flex align-items-center justify-content-between">
+          <!-- Searchbar -->
+        <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 nav d-none d-lg-flex search-bar">
         <form method="GET" action="{% url 'guitars' %}">
           <div class="input-group w-100">
             <input class="form-control border rounded-0" type="text" name="q" placeholder="Search our site">
@@ -118,7 +119,6 @@
       </div>
       <!-- End of searchbar -->
       <!-- Cart symbol -->
-      <div class="d-flex align-items-center justify-content-between">
         <ul class="d-none d-md-flex d-lg-flex">
           <li class="list-inline-item">
             <a class="{% if grand_total %}text-info font-weight-bold{% else %}{% endif %} nav-link"
@@ -291,7 +291,7 @@
     function checkIfIdle() {
       idleTime += 1000
       console.log(idleTime)
-      if (idleTime >= 5000) {
+      if (idleTime >= 60000) {
         modal.style.display = "block";
         clearInterval(idleInterval)
       }

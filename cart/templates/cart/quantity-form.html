@@ -5,7 +5,10 @@
             <div class="input-group-prepend">
                 <button class="decrement-qty btn btn-sm btn-black rounded-0" 
                     data-item_id="{{ item.item_id }}" id="decrement-qty_{{ item.item_id }}">
-                    <span>
+                    <span class="d-md-none text-white">
+                        <i class="fas fa-minus fa-sm"></i>
+                    </span>
+                    <span class="d-none d-md-block">
                         <i class="fas fa-minus fa-sm"></i>
                     </span>
                 </button>
@@ -17,7 +20,10 @@
             <div class="input-group-append">
                 <button class="increment-qty btn btn-sm btn-black rounded-0"
                     data-item_id="{{ item.item_id }}" id="increment-qty_{{ item.item_id }}">
-                    <span>
+                    <span class="d-md-none text-white">
+                        <i class="fas fa-plus fa-sm"></i>
+                    </span>
+                    <span class="d-none d-md-block">
                         <i class="fas fa-plus fa-sm"></i>
                     </span>
                 </button>

@@ -1,10 +1,7 @@
 # Guitar Emporium.
 ## An online guitar shop, check out our range or contact us and we will build your dream guitar!
 
-An online guitar store, you can check our range, 
-create a profile, 
-add to wishlist, 
-leave a review or contact us for a consultation and we will build the guitar of your dreams.
+Welcome to Guitar Emporium! This is a page for all music lovers, check out our exclusive range of guitars, if you don't find what you are looking for, get in touch and we will build your dream guitar according to your wishes. Create a profile and sign up for our newsletters.
 
 ### Home.
 ![screenshot of Home screen](/media/guitar-emporium-home.png)<br>
