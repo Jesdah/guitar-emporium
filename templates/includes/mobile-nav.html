@@ -1,39 +1,39 @@
-<div class="dropdown-center burger-mobile">
-    <a href="#" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-bars"></i>
-    </a>
+<div class="dropdown-center">
+    <button class="burger-mobile" href="#" data-bs-toggle="dropdown" aria-expanded="false" aria-label="menu"><i class="fa-solid fa-bars"></i>
+    </button>
     <ul class="dropdown-menu">
         <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="{% url 'home' %}">Home</a>
+            <a class="nav-link" aria-current="page" href="{% url 'home' %}" aria-label="Go to home page">Home</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="{% url 'guitars' %}">Guitars</a>
+            <a class="nav-link" href="{% url 'guitars' %}" aria-label="Go to guitars page">Guitars</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="{% url 'custom' %}">Custom</a>
+            <a class="nav-link" href="{% url 'custom' %}" aria-label="Go to customs page">Custom</a>
         </li>
         {% if request.user.is_authenticated %}
         {% if request.user.is_superuser %}
         <li class="nav-item">
-            <a href="{% url 'add_guitar' %}" class="dropdown-item">Product Management</a>
+            <a href="{% url 'add_guitar' %}" class="dropdown-item" aria-label="Go to product management page">Product Management</a>
         </li>
         {% endif %}
         <li class="nav-item">
-            <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
+            <a href="{% url 'profile' %}" class="dropdown-item" aria-label="Go to profile page">My Profile</a>
         </li>
         <li class="nav-item">
-            <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
+            <a href="{% url 'account_logout' %}" class="dropdown-item" aria-label="Log out">Logout</a>
         </li>
         {% else %}
         <li class="nav-item">
-            <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
+            <a href="{% url 'account_signup' %}" class="dropdown-item" aria-label="register a account">Register</a>
         </li>
         <li class="nav-item">
-            <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
+            <a href="{% url 'account_login' %}" class="dropdown-item" aria-label="login">Login</a>
         </li>
         {% endif %}
         <li class="d-block d-sm-block d-md-none">
             <a class="{% if grand_total %}text-info font-weight-bold{% else %}{% endif %} nav-link"
-                href="{% url 'view_cart'%}">
+                href="{% url 'view_cart'%}" aria-label="Your shopping cart">
                 <div class="px-3">
                     <div><i class="fa-solid fa-cart-shopping"></i></div>
                     <p class="my-0">

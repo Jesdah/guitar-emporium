@@ -88,22 +88,22 @@
                             <div class="form-group w-50">
                                 <div class="input-group">
                                     <div class="input-group-prepend">
-                                        <button class="decrement-qty btn btn-black rounded-0"
+                                        <a class="decrement-qty btn btn-black rounded-0"
                                             data-item_id="{{ guitar.id }}" id="decrement-qty_{{ guitar.id }}">
                                             <span class="icon text-white">
                                                 <i class="fas fa-minus"></i>
                                             </span>
-                                        </button>
+                                        </a>
                                     </div>
                                     <input class="form-control qty_input" type="number" name="quantity" value="1"
                                         min="1" max="99" data-item_id="{{ guitar.id }}" id="id_qty_{{ guitar.id }}">
                                     <div class="input-group-append">
-                                        <button class="increment-qty btn btn-black rounded-0"
+                                        <a class="increment-qty btn btn-black rounded-0"
                                             data-item_id="{{ guitar.id }}" id="increment-qty_{{ guitar.id }}">
                                             <span class="icon text-white">
                                                 <i class="fas fa-plus"></i>
                                             </span>
-                                        </button>
+                                        </a>
                                     </div>
                                 </div>
                             </div>

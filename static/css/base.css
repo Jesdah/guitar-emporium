@@ -54,12 +54,19 @@ header#top-header {
 
 .burger-mobile {
     font-size: larger;
-    margin-left: 10px;
+    margin-left: 20px;
+    color: #fff;
+    border: 3px solid white;
+    line-height: 1;
+    font-size: 20px;
+    background-color: #3D2314;
+    padding: 10px;
+    outline: none;
 }
 /* end of header elements */
 
 footer {
-    background-color: #5a38258f;
+    background-color: #5a3825c7;
 }
 
 .footer-text {

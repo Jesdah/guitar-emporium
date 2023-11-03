@@ -92,8 +92,8 @@
                                 <input class="form-check-input ml-2 mr-0" type="checkbox" id="id-save-info" name="save-info" checked>
 							{% else %}
 								<label class="form-check-label" for="id-save-info">
-                                    <a class="text-info" href="{% url 'account_signup' %}">Create an account</a> or 
-                                    <a class="text-info" href="{% url 'account_login' %}">login</a> to save this information
+                                    <a class="text-primary" href="{% url 'account_signup' %}">Create an account</a> or 
+                                    <a class="text-primary" href="{% url 'account_login' %}">login</a> to save this information
                                 </label>
 							{% endif %}
 						</div>
@@ -113,7 +113,7 @@
 							<span class="icon">
 								<i class="fas fa-chevron-left"></i>
 							</span>
-							<span class="font-weight-bold">Adjust Cart</span>
+							<span class="font-weight-bold text-primary">Adjust Cart</span>
 						</a>
 						<button id="submit-button" class="btn accept-btn">
 							<span class="font-weight-bold">Complete Order</span>
