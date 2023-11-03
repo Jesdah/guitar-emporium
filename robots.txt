@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: /accounts/
+Sitemap: https://guitar-emporium-8025a898f08c.herokuapp.com/
