@@ -80,8 +80,7 @@ If the user is inactive for 1 minute, a modal pops up reminding the user that th
 
 
 ### Userstories.
-![Screenshot of Userstories](/docs/readme_images/guitar-emporium-userstories.png)<br>
-I have used the agile principle when I have planned and built my site.
+You can find my userstories [here](/docs/AGILE.md).
 
 ### Lucidchart.
 ![Screenshot of Lucidchart](/docs/readme_images/guitar-emporium-lucidshart.png)<br>
