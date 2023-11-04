@@ -413,4 +413,15 @@ The HTML Templates associated with the order history page are:
 </details>
 <br>
 
+### Stripe testing.
+![Screenshot of my stripe API](/docs/testing_images/guitar-emporium-stripe-test.png)<br>
+Now everything is written in Swedish, but the picture describes that:
+* API requests:
+    * Successful - 42
+    * Failed - 0
+* Webhooks:
+    * Successful - 40
+    * Failed - 9
+
+The Failed webooks comes from my development enviroment, I have tested it through the live version with good result.<br>
 [Get back to parent README file.](/docs/README.md)
