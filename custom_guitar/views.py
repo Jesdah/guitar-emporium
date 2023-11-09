@@ -4,11 +4,6 @@ from django.contrib import messages
 from .models import Custom
 from .forms import CustomGuitarForm
 
-# def custom_guitar(request):
-#     """ A view to return the contact form page."""
-
-#     return render(request, 'custom/custom.html')
-
 
 def submit_custom_guitar_form(request):
     """ Renders the custom guitar form """

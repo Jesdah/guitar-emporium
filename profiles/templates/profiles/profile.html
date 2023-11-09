@@ -79,7 +79,7 @@
                     <tbody>
                         {% for wishlist in wishlist_item %}
                         <tr>
-                            <td>{{ wishlist.wishlist_item }}</td>
+                            <td><a href="{% url 'guitar_detail' wishlist.id %}">{{ wishlist.wishlist_item }}</a></td>
                         </tr>
                         {% endfor %}
                     </tbody>
