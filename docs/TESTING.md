@@ -424,4 +424,29 @@ Now everything is written in Swedish, but the picture describes that:
     * Failed - 9
 
 The Failed webooks comes from my development enviroment, I have tested it through the live version with good result.<br>
+
+### Testing Email verification.
+
+To test that the email verification works, I have used Tempemail.com to be able to create several different accounts more easily.<br>
+
+1. Create an account.
+![Screenshot of signup page](/docs/testing_images/guitar-emporium-email-signup.png)<br>
+2. Go to your email and click on the link.
+![Screenshot of verification email](/docs/testing_images/guitar-emporium-email-verification.png)<br>
+3. Click on confirm.
+![Screenshot of confirm page](/docs/testing_images/guitar-emporium-email-confirm.png)<br>
+4. Oops! it looks like we already have forgotten our password! Click on forgot password link.<br>
+5. Enter your email and click reset my password.
+![Screenshot of password reset page](/docs/testing_images/guitar-emporium-email-passwordreset.png)<br>
+6. Go to your email and click on the link.
+![Screenshot of password reset email](/docs/testing_images/guitar-emporium-email-passwordreset-mail.png)<br>
+7. Enter your new password two times and try not to forget it this time.
+![Screenshot of change password page](/docs/testing_images/guitar-emporium-email-changepassword.png)<br>
+8. Password has now been changed.
+![Screenshot of change password confirmation](/docs/testing_images/guitar-emporium-email-passwordchanged.png)<br>
+9. Click on My Account and then login to sign in.
+![Screenshot of signin page](/docs/testing_images/guitar-emporium-email-signin.png)<br>
+10. Success!
+![Screenshot of success message](/docs/testing_images/guitar-emporium-email-signinsuccess.png)<br>
+
 [Get back to parent README file.](/docs/README.md)
