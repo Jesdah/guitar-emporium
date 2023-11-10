@@ -30,7 +30,7 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['guitar-emporium-8025a898f08c.herokuapp.com', '8000-jesdah-guitaremporium-c4g6oji3aws.ws-eu106.gitpod.io']
 
