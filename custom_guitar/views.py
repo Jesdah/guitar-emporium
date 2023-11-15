@@ -14,7 +14,7 @@ def submit_custom_guitar_form(request):
         if form.is_valid():
             form.save()
             messages.success(request, 'You have submitted your application, '
-            'our workshop will contact you as soon as possible!')
+                             'our workshop will contact you as soon as possible!')
             return redirect(reverse('guitars'))
         else:
             messages.error(request, 'Failed to submit the form. Please ensure the form is valid.')

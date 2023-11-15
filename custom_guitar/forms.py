@@ -7,14 +7,14 @@ class DateInput(forms.DateInput):
     """
     input_type = 'date'
 
+
 class CustomGuitarForm(forms.ModelForm):
 
     class Meta:
         model = Custom
         fields = ('title', 'full_name', 'email', 'phone_number', 'message', 'make_contact',)
 
-        widgets = {'make_contact': DateInput(),}
+        widgets = {'make_contact': DateInput(), }
 
         labels = {
-            'make_contact': ('Tell us what day you want us to contact you for a consultation.'),}
- 
+            'make_contact': ('Tell us what day you want us to contact you for a consultation.'), }

@@ -1,5 +1,6 @@
 from django.db import models
 
+
 class Custom(models.Model):
     """
     A model for customers who want to book a consultation

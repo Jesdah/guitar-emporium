@@ -3,7 +3,11 @@ from django.conf import settings
 from django.shortcuts import get_object_or_404
 from guitars.models import Guitar
 
+
 def cart_contents(request):
+    """
+    saves cart items in the session.
+    """
 
     cart_items = []
     total = 0

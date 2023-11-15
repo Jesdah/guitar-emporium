@@ -6,7 +6,6 @@ from .forms import ReviewsForm
 from .models import Reviews
 
 
-
 @login_required
 def add_review(request, guitar_id):
     """ A view to return the review page """
@@ -34,4 +33,3 @@ def add_review(request, guitar_id):
     }
 
     return render(request, template, context)
-

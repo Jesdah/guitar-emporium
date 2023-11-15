@@ -1,14 +1,17 @@
-from django.shortcuts import render, redirect, reverse, HttpResponse, get_object_or_404
+from django.shortcuts import (render, redirect, reverse,
+                              HttpResponse, get_object_or_404)
 from django.contrib import messages
 
 from guitars.models import Guitar
 
 # Create your views here.
 
+
 def view_cart(request):
     """ A view that renders the cart contents page """
 
     return render(request, 'cart/cart.html')
+
 
 def add_to_cart(request, item_id):
     """ Add a quantity of the specified product to the cart """
@@ -21,7 +24,8 @@ def add_to_cart(request, item_id):
 
     if item_id in list(cart.keys()):
         cart[item_id] += quantity
-        messages.success(request, f'Updated {guitar.name} quantity to {cart[item_id]}')
+        messages.success(request, f'Updated {guitar.name}'
+                         'quantity to {cart[item_id]}')
     else:
         cart[item_id] = quantity
         messages.success(request, f'Added {guitar.name} to your cart')
@@ -40,7 +44,8 @@ def adjust_cart(request, item_id):
 
     if quantity > 0:
         cart[item_id] = quantity
-        messages.success(request, f'Updated {guitar.name} quantity to {cart[item_id]}')
+        messages.success(request, f'Updated {guitar.name}'
+                         'quantity to {cart[item_id]}')
     else:
         cart.pop(item_id)
         messages.success(request, f'Removed {guitar.name} from your cart')
@@ -56,7 +61,6 @@ def remove_from_cart(request, item_id):
         guitar = get_object_or_404(Guitar, pk=item_id)
 
         cart = request.session.get('cart', {})
-
 
         if cart.pop(item_id):
             messages.success(request, f'Removed {guitar.name} from your cart')

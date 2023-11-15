@@ -44,9 +44,9 @@ def all_guitars(request):
         if 'q' in request.GET:
             query = request.GET['q']
             if not query:
-                messages.error(request, "You didn't enter any search criteria!")
+                messages.error(request,
+                               "You didn't enter any search criteria!")
                 return redirect(reverse('guitars'))
-
             queries = Q(name__icontains=query) | Q(description__icontains=query)
             guitars = guitars.filter(queries)
 
@@ -61,6 +61,7 @@ def all_guitars(request):
 
     return render(request, 'guitars/guitars.html', context)
 
+
 def guitar_detail(request, guitar_id):
     """ A view to show individual Guitar details and display reviews
     and filter the by guitar_id.
@@ -69,7 +70,8 @@ def guitar_detail(request, guitar_id):
     guitar = get_object_or_404(Guitar, pk=guitar_id)
     reviews = Reviews.objects.filter(guitar=guitar_id)
     if request.user.is_authenticated:
-        wishlist_item = WishList.objects.filter(wishlist_item_id=guitar_id, user=request.user)
+        wishlist_item = WishList.objects.filter(wishlist_item_id=guitar_id,
+                                                user=request.user)
     context = {
         'guitar': guitar,
         'guitar_reviews': reviews,
@@ -77,6 +79,7 @@ def guitar_detail(request, guitar_id):
     }
 
     return render(request, 'guitars/guitar_detail.html', context)
+
 
 @login_required
 def add_guitar(request):
@@ -89,7 +92,8 @@ def add_guitar(request):
         form = GuitarForm(request.POST, request.FILES)
         if form.is_valid():
             guitar = form.save()
-            messages.success(request, 'Successfully added product!')
+            messages.success(request,
+                             'Successfully added product!')
             return redirect(reverse('guitar_detail', args=[guitar.id]))
         else:
             messages.error(request, 'Failed to add product. Please ensure the form is valid.')

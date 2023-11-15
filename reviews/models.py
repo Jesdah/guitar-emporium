@@ -15,5 +15,7 @@ class Reviews(models.Model):
         """
         ordering = ["post_date"]
 
+        verbose_name_plural = 'Reviews'
+
     def __str__(self):
         return self.review

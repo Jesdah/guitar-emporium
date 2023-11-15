@@ -413,6 +413,10 @@ The HTML Templates associated with the order history page are:
 </details>
 <br>
 
+### Flake8 python validation
+![Screenshot of my stripe API](/docs/testing_images/guitar-emporium-flake8.png)<br>
+When I have done my python validation, I get a lot of errors, although most of the errors come from allauth. After a lot of work, there are no errors left in my own code.
+
 ### Stripe testing.
 ![Screenshot of my stripe API](/docs/testing_images/guitar-emporium-stripe-test.png)<br>
 Now everything is written in Swedish, but the picture describes that:

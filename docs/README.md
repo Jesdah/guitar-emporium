@@ -1,7 +1,11 @@
 # Guitar Emporium.
 ## An online guitar shop, check out our range or contact us and we will build your dream guitar!
 
-Welcome to Guitar Emporium! This is a page for all music lovers, check out our exclusive range of guitars, if you don't find what you are looking for, get in touch and we will build your dream guitar according to your wishes. Create a profile and sign up for our newsletters.
+Welcome to Guitar Emporium! This is a page for all music lovers, check out our exclusive range of guitars, if you don't find what you are looking for, get in touch and we will build your dream guitar according to your wishes. Create a profile and sign up for our newsletters.<br>
+
+The site is mainly aimed at business to customer, but since the site sells expensive guitars, I follow more the business to business model. Since the goods have that price tag and exclusivity, I have put a lot of energy into the customer being able to find as much information as possible about the item they are speculating on, so the customer will spend a lot of time on the site before the customer decides to make a transaction.
+
+
 
 ### Home.
 ![screenshot of Home screen](/docs/readme_images/guitar-emporium-home.png)<br>
@@ -27,7 +31,7 @@ If the user presses Delete, a pop-up window appears asking the user if they want
 
 ### Guitar Details.
 ![Screenshot of guitar detail page](/docs/readme_images/guitar-emporium-guitar-details.png)<br>
-When the user clicks on one of the guitars, the reader is taken to the detailed page. Here we only see a guitar with a picture and a detailed description, at the bottom the user can add the product to the shopping cart or see reviews. Superusers can edit or delete an item and a logged in user can leave a review.
+When the user clicks on one of the guitars, the user is taken to the detailed page. Here we only see a guitar with a picture and a detailed description, at the bottom the user can add the product to the shopping cart or see reviews. Superusers can edit or delete an item and a logged in user can wishlist or leave a review.
 
 ### Add Guitar.
 ![Screenshot of the add guitar page](/docs/readme_images/guitar-emporium-add-guitar.png)<br>
@@ -111,6 +115,7 @@ Balsamiq has been used at an early stage to facilitate an overview of how the si
 * AWS Bucket
 
 ### Features left to implement.
+In the future I would like to implement more categories. 
 
 ### Technologies.
 * HTML
@@ -137,6 +142,8 @@ Balsamiq has been used at an early stage to facilitate an overview of how the si
     * Mail chimp has been used to let users sign up for newsletters.
 * AWS Bucket
     * Used for storage of static files
+* [Free AI Generator](https://ahrefs.com/sv/writing-tools/product-description-generator)
+    * Have been used to generate product descriptions.
 
 # Testing.
 

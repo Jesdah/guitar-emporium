@@ -5,7 +5,7 @@ from guitars.models import Guitar
 
 class WishList(models.Model):
     """Handels Wishlist"""
-    user = models.ForeignKey(User, on_delete=models.CASCADE,blank=False)
+    user = models.ForeignKey(User, on_delete=models.CASCADE, blank=False)
     wishlist_item = models.ForeignKey(Guitar, on_delete=models.CASCADE)
 
     def __str__(self):
