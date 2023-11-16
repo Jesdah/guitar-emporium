@@ -75,7 +75,7 @@ def guitar_detail(request, guitar_id):
     context = {
         'guitar': guitar,
         'guitar_reviews': reviews,
-        'wishlist_item': wishlist_item 
+        'wishlist_item': wishlist_item
     }
 
     return render(request, 'guitars/guitar_detail.html', context)
@@ -96,7 +96,8 @@ def add_guitar(request):
                              'Successfully added product!')
             return redirect(reverse('guitar_detail', args=[guitar.id]))
         else:
-            messages.error(request, 'Failed to add product. Please ensure the form is valid.')
+            messages.error(request, 'Failed to add product. '
+                           'Please ensure the form is valid.')
     else:
         form = GuitarForm()
 
@@ -123,7 +124,8 @@ def edit_guitar(request, guitar_id):
             messages.success(request, 'Successfully updated product!')
             return redirect(reverse('guitar_detail', args=[guitar.id]))
         else:
-            messages.error(request, 'Failed to update product. Please ensure the form is valid.')
+            messages.error(request, 'Failed to update product. '
+                           'Please ensure the form is valid.')
     else:
         form = GuitarForm(instance=guitar)
         messages.info(request, f'You are editing {guitar.name}')

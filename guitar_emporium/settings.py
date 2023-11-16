@@ -33,7 +33,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 DEBUG = False
 
 ALLOWED_HOSTS = ['guitar-emporium-8025a898f08c.herokuapp.com',
-'8000-jesdah-guitaremporium-c4g6oji3aws.ws-eu106.gitpod.io']
+                 '8000-jesdah-guitaremporium-c4g6oji3aws.ws-eu106.gitpod.io']
 
 
 # Application definition
@@ -132,8 +132,6 @@ DATABASES = {
    'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
 }
 
-
-
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
 
@@ -183,7 +181,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 if 'USE_AWS' in os.environ:
 
-     # Cache control
+    # Cache control
     AWS_S3_OBJECT_PARAMETERS = {
         'Expires': 'Thu, 31 Dec 2099 20:00:00 GMT',
         'CacheControl': 'max-age=94608000',
