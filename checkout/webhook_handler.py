@@ -130,6 +130,14 @@ class StripeWH_Handler:
                             quantity=item_data,
                         )
                         order_line_item.save()
+                    else:
+                        for quantity in item_data.items():
+                            order_line_item = OrderLineItem(
+                                order=order,
+                                guitar=guitar,
+                                quantity=quantity,
+                            )
+                        order_line_item.save()
             except Exception as e:
                 if order:
                     order.delete()
