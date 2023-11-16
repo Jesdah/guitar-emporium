@@ -402,6 +402,9 @@ The HTML Templates associated with the Custom page are:
 <summary>Order history page testing.</summary>
 
 The HTML Templates associated with the order history page are:
+* base.html
+* mobile-nav.html
+* checkout_success.html
 
 ### Lighthouse Testing.
 <img src="../docs/testing_images/guitar-emporium-orderhistory-lighthouse.png"><br>

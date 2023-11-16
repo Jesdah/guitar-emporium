@@ -14,6 +14,11 @@ I have connected all user stories to epics.
 
 1. An Epic to set the fundamentals.<br>
 ![Screenshot of epic 1](/docs/agile_images/guitar-emporium-epic-setup.png)<br>
+This Epic I created to make sure all the fundamental building blocks were in place before I started my project.<br>
+Epic is done when all points are completed:
+    * Deploy to heroku 
+    * create base.html
+    * Install Django
 
 2. Install alluth for registration.<br>
 ![Screenshot of epic 2](/docs/agile_images/guitar-emporium-epic-login.png)<br>

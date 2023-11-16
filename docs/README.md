@@ -1,4 +1,4 @@
-# Guitar Emporium.
+# Guitar Emporium
 ## An online guitar shop, check out our range or contact us and we will build your dream guitar!
 
 Welcome to Guitar Emporium! This is a page for all music lovers, check out our exclusive range of guitars, if you don't find what you are looking for, get in touch and we will build your dream guitar according to your wishes. Create a profile and sign up for our newsletters.<br>
@@ -31,7 +31,7 @@ If the user presses Delete, a pop-up window appears asking the user if they want
 
 ### Guitar Details.
 ![Screenshot of guitar detail page](/docs/readme_images/guitar-emporium-guitar-details.png)<br>
-When the user clicks on one of the guitars, the user is taken to the detailed page. Here we only see a guitar with a picture and a detailed description, at the bottom the user can add the product to the shopping cart or see reviews. Superusers can edit or delete an item and a logged in user can wishlist or leave a review.
+When the user clicks on one of the guitars, the user is taken to the detailed page. Here we only see a guitar with a picture and a detailed description, at the bottom the user can add the product to the shopping cart or see reviews. Superusers can edit or delete an item and a logged in user can add to wishlist or leave a review.
 
 ### Add Guitar.
 ![Screenshot of the add guitar page](/docs/readme_images/guitar-emporium-add-guitar.png)<br>
