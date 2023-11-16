@@ -9,6 +9,7 @@ from profiles.models import UserProfile
 
 import json
 import time
+import stripe
 
 
 class StripeWH_Handler:
@@ -51,9 +52,14 @@ class StripeWH_Handler:
         cart = intent.metadata.cart
         save_info = intent.metadata.save_info
 
-        billing_details = intent.charges.data[0].billing_details
+         # Get the Charge object
+        stripe_charge = stripe.Charge.retrieve(
+            intent.latest_charge
+        )
+
+        billing_details = stripe_charge.billing_details     # updated
         shipping_details = intent.shipping
-        grand_total = round(intent.charges.data[0].amount / 100, 2)
+        grand_total = round(stripe_charge.amount / 100, 2)  # updated
 
         # Clean data in the shipping details
         for field, value in shipping_details.address.items():
@@ -101,8 +107,8 @@ class StripeWH_Handler:
         if order_exists:
             self._send_confirmation_email(order)
             return HttpResponse(
-                content=f'Webhook received: {event["type"]} '
-                f'| SUCCESS: Verified order already in database',
+                content=f'Webhook received: {event["type"]}\
+                | SUCCESS: Verified order already in database',
                 status=200)
         else:
             order = None
@@ -121,8 +127,8 @@ class StripeWH_Handler:
                     original_cart=cart,
                     stripe_pid=pid,
                 )
-                for item_id, item_data in json.loads(cart).items():
-                    guitar = Guitar.objects.get(id=item_id)
+                for guitar_id, item_data in json.loads(cart).items():
+                    guitar = Guitar.objects.get(id=guitar_id)
                     if isinstance(item_data, int):
                         order_line_item = OrderLineItem(
                             order=order,
@@ -130,14 +136,7 @@ class StripeWH_Handler:
                             quantity=item_data,
                         )
                         order_line_item.save()
-                    else:
-                        for quantity in item_data.items():
-                            order_line_item = OrderLineItem(
-                                order=order,
-                                guitar=guitar,
-                                quantity=quantity,
-                            )
-                        order_line_item.save()
+
             except Exception as e:
                 if order:
                     order.delete()
