@@ -3,17 +3,12 @@
 
 Welcome to Guitar Emporium! This is a page for all music lovers, check out our exclusive range of guitars, if you don't find what you are looking for, get in touch and we will build your dream guitar according to your wishes. Create a profile and sign up for our newsletters.<br>
 
-The site is mainly aimed at business to customer, but since the site sells expensive guitars, I follow more the business to business model. Since the goods have that price tag and exclusivity, I have put a lot of energy into the customer being able to find as much information as possible about the item they are speculating on, so the customer will spend a lot of time on the site before the customer decides to make a transaction.
-
-
-
 ### Home.
 ![screenshot of Home screen](/docs/readme_images/guitar-emporium-home.png)<br>
 On the home, which is the home page, the user is met by a header, page quote and a footer.
 <br>
 The content of the page mainly consists of a large background image where we see a rock star who is on his way to the stage and in the center is a quote from Bob Dylan and a button that takes the user to the guitar page.
 The aim is to trigger curiosity in the user and give an impression of quality and seriousness.
-
 
 ### Guitars Page.
 ![screenshot of guitars page.](/docs/readme_images/guitar-emporium-guitars.png)<br>
@@ -22,7 +17,6 @@ On the page, it is possible to sort the assortment according to certain criteria
 
 ### Edit Guitar.
 ![Screenshot of edit guitar page](/docs/readme_images/guitar-emporium-edit-guitar.png)<br>
-
 On the page, old information is already entered and a superuser can then freely change the fields without going through the admin panel.
 
 ### Delete Guitar.
@@ -77,11 +71,24 @@ The footer is identical on all pages.
 ![Screenshot of the reminder](/docs/readme_images/guitar-emporium-reminder.png)<br>
 If the user is inactive for 1 minute, a modal pops up reminding the user that the company also offers specially designed guitars and that the form can be found under the Custom link.
 
+## Webmarketing
+The site is mainly aimed at business to customer, but since the site sells expensive guitars, I follow more the business to business model. Since the goods have that price tag and exclusivity, I have put a lot of energy into the customer being able to find as much information as possible about the item they are speculating on, so the customer will spend a lot of time on the site before the customer decides to make a transaction.
+<br>
+An xml sitemap was created and added to the project's root directory. This is a file that lists the website’s important page URLs, making sure that search engines can crawl, or navigate, through them. It also helps search engines understand the website structure, so can help speed up content discovery.
+
+The robots.txt file was also created and added to the projects root directory. This is a simple text file that tells search engines where they are not allowed to go on the website. It lists out any folders or files that will not be crawled or indexed by search engine spiders. Having this robots.txt file shows that the site acknowledges that search engines are allowed and that they may have free access to it. For this reason, search engines take the existence of this file as a sign of quality, and so should improve the SEO ranking.
+<br>
+The keywords are carefully selected to give the best SEO rating possible without stuffing.
+
+Rel attributes such as noopener were also used on any external links.
+* Noopener is mandatory for any links that have the 'target="_blank"' attribute. This prevents the new page having any access to the tab/session that opened it, preventing common phishing attack vectors.
+
+### Content Marketing
+Facebook is used as the primary tool for web marketing. The advantage of Facebook is that it is very easy to build your own page plus it is free, to get as much out of Facebook as possible you have to be active with new updates and interact with your customers and thus build your own community.
 ### Facebook Page.
 ![Screenshot of Facebook page](/docs/readme_images/facebook-1.png)<br>
 ![Screenshot of Facebook page](/docs/readme_images/facebook-2.png)<br>
 ![Screenshot of Facebook page](/docs/readme_images/facebook-3.png)<br>
-
 
 ### Userstories.
 You can find my userstories [here](/docs/AGILE.md).
