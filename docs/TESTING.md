@@ -1,7 +1,9 @@
 # Testing.
 ## Manual Test.
+
 ### Responsivenes.
 The site were tested to ensure responsiveness on screen sizes from 320px and upwards on Chrome and Edge.
+
 ### Steps to test:
 1. Open browser and navigate to [Guitar Emporium](https://guitar-emporium-8025a898f08c.herokuapp.com/).
 2. Open the developer tools (right click and inspect)
@@ -46,13 +48,31 @@ Steps to test:
     1. Click on a image
     2. View a Review
     3. Add to Cart
+        * Message displayes that an item has been added to the customers cart.
 5. Go to Cart:
     1. Update quantity
+        * Message displayes that the quantity has been updated to the customers cart.
     2. Remove Item
+        * Message displayes that the item has been removed from the customers cart.
     3. Do step 4.1 to 4.3 again
 6. Click "Secure Checkout"
     1. Fill in information
+        * Name - Mandatory
+        * Email - Must include "@something"
+        * Phone number - Mandatory
+        * Adress 1 - Mandatory
+        * Adress 2 - can be left empty
+        * Town or city - Mandatory
+        * County/state - can be left empty
+        * Postal code - can be left empty
+        * Country - Mandatory
+            * If any of the mandatory fields is left empty the form will not be submitted.
     2. Complete the purchase
+        * cardnumber: 4242 4242 4242 4242
+        * Date: 04 / 24
+        * CVC: 242
+        * Postal number: 42424
+            * Message will display to the user that the purchase is successful, display an ordernumber and send a confirmation email through Stripe.
 7. Do steps 1.0 to 6.2 again in mobile view.
 <br>
 
