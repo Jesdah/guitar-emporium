@@ -210,6 +210,8 @@ Navigate to the GitHub Repository you want to clone to use locally:
 The project will now been cloned on your local machine for use.
 
 ### Credit.
+* Many elements of the the e-commerce part of this project have been adapted from the Code Institute's "Boutique Ado" Code-through Project.
+
 * I found the Date picker [here](https://stackoverflow.com/questions/3367091/whats-the-cleanest-simplest-to-get-running-datepicker-in-django)
 
 * I got the styling for .accept-btn [here](https://www.sliderrevolution.com/resources/css-button-hover-effects/)
