@@ -254,7 +254,7 @@ Steps to test:
     * Result: redirect to login.
 ### Expected:
 
-The expectation has been that the site works as it should without broken links and that the user receives feedback in all situations and that unauthorized users cannot get in the back way and change or add data.
+The expectation has been that the site works as it should without broken links. Further that the user receives feedback in all situations and that unauthorized users cannot get in the back way and change or add data.
 
 ### Actual:
 The site works as expected
