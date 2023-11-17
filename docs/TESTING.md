@@ -48,12 +48,12 @@ Steps to test:
     1. Click on a image
     2. View a Review
     3. Add to Cart
-        * Message displayes that an item has been added to the customers cart.
+        * Message display that an item has been added to the customers cart.
 5. Go to Cart:
     1. Update quantity
-        * Message displayes that the quantity has been updated to the customers cart.
+        * Message display that the quantity has been updated to the customers cart.
     2. Remove Item
-        * Message displayes that the item has been removed from the customers cart.
+        * Message display that the item has been removed from the customers cart.
     3. Do step 4.1 to 4.3 again
 6. Click "Secure Checkout"
     1. Fill in information
@@ -101,23 +101,44 @@ Steps to test:
 4. Buy a Guitar:
     1. Click on a image
     2. Add to Wishlist - Heart symbol is red
+        * Message display that an item is added to wishlist
         1. Follow step 7.
         2. Make sure a new item is added in Wishlist
         3. Go back to Wishlisted Guitar.
     3. Remove from Wishlist - heart symbol is transparent
+        * Message display that an item has been removed from wishlist
         1. Follow step 7.
         2. Make sure the item is removed from Wishlist
         3. Go back to Guitar.
     4. View a Review
     5. Add a Review
+        * Message display that your review is submited
     6. Add to Cart
+        * Message display that an item has been added to the customers cart.
 5. Go to Cart:
     1. Update quantity
+        * Message display that the quantity has been updated to the customers cart.
     2. Remove Item
+        * Message display that the item has been removed from the customers cart.
     3. Do step 4.1 to 4.3 again
 6. Click "Secure Checkout"
     1. Fill in information
+        * Name - Mandatory
+        * Email - Must include "@something"
+        * Phone number - Mandatory
+        * Adress 1 - Mandatory
+        * Adress 2 - can be left empty
+        * Town or city - Mandatory
+        * County/state - can be left empty
+        * Postal code - can be left empty
+        * Country - Mandatory
+            * If any of the mandatory fields is left empty the form will not be submitted.
     2. Complete the purchase
+        * cardnumber: 4242 4242 4242 4242
+        * Date: 04 / 24
+        * CVC: 242
+        * Postal number: 42424
+            * Message will display to the user that the purchase is successful, display an ordernumber and send a confirmation email through Stripe.
 7. Go to Profile under My Account
     1. View Order history
     2. View Wish listed items
@@ -150,7 +171,7 @@ Steps to test:
     4. Edit Guitar
         1. Change all the fields
         2. Click update
-        3. Info message is displayed
+            * Message display that the product have been updated.
     5. Delete Guitar
         1. Click Delete
         2. popup message is displayed
@@ -160,15 +181,18 @@ Steps to test:
 4. Go to Guitar Details:
     1. Click on a image
     2. Add to Wishlist - Heart symbol is red
+        * Message display that an item is added to wishlist 
         1. Follow step 7.1.
         2. Make sure a new item is added in Wishlist
         3. Go back to Wishlisted Guitar.
     3. Remove from Wishlist - heart symbol is transparent
+        * Message display that an item is removed wishlist 
         1. Follow step 7.1.
         2. Make sure the item is removed from Wishlist
         3. Go back to Guitar.
     4. View a Review
     5. Add a Review
+        * Message display that your review is submited
     6. Edit Guitar
         1. Change all the fields
         2. Click update
@@ -180,19 +204,38 @@ Steps to test:
             2. Press yes and the product is deleted
         3. Info message says that a product is deleted
     8. Add to Cart
+        * Message display that an item has been added to the customers cart.
 5. Go to Cart:
     1. Update quantity
+        * Message display that the quantity has been updated to the customers cart.
     2. Remove Item
+        * Message display that the item has been removed from the customers cart.
     3. Do step 4.1 to 4.3 again
 6. Click "Secure Checkout"
     1. Fill in information
+        * Name - Mandatory
+        * Email - Must include "@something"
+        * Phone number - Mandatory
+        * Adress 1 - Mandatory
+        * Adress 2 - can be left empty
+        * Town or city - Mandatory
+        * County/state - can be left empty
+        * Postal code - can be left empty
+        * Country - Mandatory
+            * If any of the mandatory fields is left empty the form will not be submitted.
     2. Complete the purchase
+    * cardnumber: 4242 4242 4242 4242
+        * Date: 04 / 24
+        * CVC: 242
+        * Postal number: 42424
+            * Message will display to the user that the purchase is successful, display an ordernumber and send a confirmation email through Stripe.
 7. Go to My Account
     1. Click Profile
         1. View Order history
         2. View Wish listed items
     2. Click Product Management
         1. Fill in the form to add a new product
+            * Message display that a new product has been added
         2. View the new product by clicking guitars in the navbar
 
 8. Do steps 1.0 to 7.2 again in mobile view.
